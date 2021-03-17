@@ -21,7 +21,7 @@
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css?v=<?php echo time(); ?>" rel="stylesheet">
 </head>
 
 <body>
@@ -56,69 +56,51 @@
                             <div class="form-row">
                                 <div class="col-sm form-group">
                                     <label class="control-label">Nombre</label>
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required />
                                     <div class="validate"></div>
                                 </div>
                                 <div class="col-sm form-group">
                                     <label class="control-label">Apellido Paterno</label>
-                                    <input type="text" class="form-control" name="email" id="email" placeholder="Apellido Paterno" data-rule="email" data-msg="Please enter a valid email" />
+                                    <input type="text" class="form-control" name="email" id="email" placeholder="Apellido Paterno" required />
                                     <div class="validate"></div>
                                 </div>
                                 <div class="col-sm  form-group">
                                     <label class="control-label">Apellido Materno</label>
-                                    <input type="text" class="form-control" name="email" id="email" placeholder="Apellido Materno" data-rule="email" data-msg="Please enter a valid email" />
+                                    <input type="text" class="form-control" name="email" id="email" placeholder="Apellido Materno" required />
                                     <div class="validate"></div>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-sm form-group">
-                                    <label class="control-label">Nombre de Usuario</label>
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Nombre de Usuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <label class="control-label">Correo Electronico</label>
+                                    <input type="email" name="name" class="form-control" id="name" placeholder="Correo Electronico" required />
                                     <div class="validate"></div>
                                 </div>
                                 <div class="col-sm form-group">
                                     <label class="control-label">Fecha de Nacimiento</label>
-                                    <input type="date" class="form-control" name="email" id="email" placeholder="Fecha de Nacimiento" data-rule="email" data-msg="Please enter a valid email" />
+                                    <input type="date" class="form-control" name="email" id="email" placeholder="Fecha de Nacimiento" required />
                                     <div class="validate"></div>
                                 </div>
-                                <div class="col-sm  form-group">
-                                    <label class="control-label">Peso Kg</label>
-                                    <input type="number" class="form-control" name="email" id="email" placeholder="Peso" data-rule="email" data-msg="Please enter a valid email" />
-                                    <div class="validate"></div>
-                                </div>
+
                             </div>
+
 
                             <div class="form-row">
                                 <div class="col-sm form-group">
-                                    <label class="control-label">Estatura</label>
-                                    <input type="number" name="name" class="form-control" id="name" placeholder="Estatura" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                    <div class="validate"></div>
-                                </div>
-                                <div class="col-sm form-group">
-                                    <label class="control-label">Ciudad</label>
-                                    <select class="form-control">
-                                    </select>
-                                </div>
-                                <div class="col-sm form-group">
-                                    <label class="control-label">Asociacion</label>
-                                    <select class="form-control">
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-sm form-group">
                                     <label class="control-label">Tipo de Usuario</label>
-                                    <select class="form-control">
+                                    <select class="form-control" required>
+                                        <option value="1">Entrenador</option>
+                                        <option value="2">Estudiante</option>
                                     </select>
                                 </div>
                                 <div class="col-sm form-group">
                                     <label class="control-label">Contrasena</label>
-                                    <input type="password" name="name" class="form-control" id="name" placeholder="Contrasena" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <input type="password" name="name" class="form-control" id="name" placeholder="Contrasena" required />
                                     <div class="validate"></div>
                                 </div>
                                 <div class="col-sm form-group">
                                     <label class="control-label">Confirmar Contrasena</label>
-                                    <input type="password" name="name" class="form-control" id="name" placeholder="Contrasena" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <input type="password" name="name" class="form-control" id="name" placeholder="Contrasena" required />
                                     <div class="validate"></div>
                                 </div>
                             </div>

@@ -21,7 +21,7 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.css?v=<?php echo time(); ?>" rel="stylesheet">
 </head>
 
 <body>
@@ -67,7 +67,7 @@
                 <div class="sent-message">Su mensaje fue enviado. Gracias!</div>
               </div>
 
-              <div class="text-center"><button type="submit">Iniciar Sesion</button></div>
+              <div class="text-center "><button type="submit">Iniciar Sesion</button></div>
             </form>
 
           </div>

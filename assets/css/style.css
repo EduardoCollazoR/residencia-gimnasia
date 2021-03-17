@@ -267,8 +267,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .get-started-btn {
   margin-left: 22px;
-  background: #5fcf80;
-  color: #fff;
+  border: 2px solid #5fcf80;
+  background: #fff;
+  color: #5fcf80;
   border-radius: 50px;
   padding: 8px 25px;
   white-space: nowrap;
@@ -1468,17 +1469,17 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input, .contact .php-email-form textarea {
+.contact .php-email-form input, .contact .php-email-form textarea, .contact .php-email-form select {
   border-radius: 4px;
   box-shadow: none;
   font-size: 14px;
 }
 
-.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
+.contact .php-email-form input:focus, .contact .php-email-form textarea:focus, .contact .php-email-form select:focus {
   border-color: #5fcf80;
 }
 
-.contact .php-email-form input {
+.contact .php-email-form input, .contact .php-email-form select {
   height: 44px;
 }
 

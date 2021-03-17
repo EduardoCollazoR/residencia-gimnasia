@@ -11,7 +11,6 @@
         <li><a href="cursos.php">Cursos</a></li>
         <li><a href="auxilios.php">Auxilios</a></li>
         <li><a href="contacto.php">Contacto</a></li>
-
       </ul>
     </nav><!-- .nav-menu -->
 
