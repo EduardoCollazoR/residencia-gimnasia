@@ -1469,7 +1469,7 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input, .contact .php-email-form textarea, .contact .php-email-form select {
+.contact .php-email-form input, .contact .php-email-form textarea, .contact .php-email-form select, .contact .php-email-form button {
   border-radius: 4px;
   box-shadow: none;
   font-size: 14px;

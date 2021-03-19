@@ -53,21 +53,21 @@
             <form action=" forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="form-group">
                 <label class="control-label">Nombre de Usuario</label>
-                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre de Usuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre de Usuario" data-rule="minlen:3" data-msg="Por favor ingresa minimo 3 letras" />
                 <div class="validate"></div>
               </div>
               <div class=" form-group">
                 <label class="control-label">Contraseña</label>
-                <input type="password" class="form-control" name="email" id="email" placeholder="Contraseña" data-rule="email" data-msg="Please enter a valid email" />
+                <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña" data-rule="minlen:8" data-msg="Por favor ingresa una contraseña" />
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
                 <div class="loading">Cargando...</div>
                 <div class="error-message"></div>
-                <div class="sent-message">Su mensaje fue enviado. Gracias!</div>
+                <div class="sent-message">Haz Iniciado Sesion Correctamente. Bienvenido!</div>
               </div>
 
-              <div class="text-center "><button type="submit">Iniciar Sesion</button></div>
+              <div class="text-center "><button class="get-started-btn btn" type="submit">Iniciar Sesion</button></div>
             </form>
 
           </div>

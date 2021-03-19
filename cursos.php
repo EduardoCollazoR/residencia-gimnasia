@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Cursos</title>
+  <title>Cursos</title>
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- ======= Header ======= -->
-	<?php include 'navbar.php';?>
-<!-- End Header -->
+  <!-- ======= Header ======= -->
+  <?php include 'navbar.php'; ?>
+  <!-- End Header -->
 
-<!-- ======= Login ======= -->
-	<?php include 'login.php';?>
-<!-- End Login -->
 
-	  <main id="main" data-aos="fade-in">
+  <main id="main" data-aos="fade-in">
 
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
@@ -41,7 +59,7 @@
                 <h3><a href="detalles-salto.php">Salto de Caballo/Potro</a></h3>
                 <p>Este evento se coloca en forma lateral para la ejecución del salto desde la tabla de impulso, vuelo de entrada, apoyo pasajero de una o dos manos, repulsión, vuelo de salida y llegada a la posición de firmes.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
-                                    
+
                 </div>
               </div>
             </div>
@@ -60,10 +78,10 @@
                 <p>En este evento se realizan ejercicios únicamente de vuelo y presentándose posiciones estéticas pasajeras, la gimnasta debe de realizar movimientos en ambas barras y cuya combinación sea elegante y armoniosa.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
-                    
+
                   </div>
                   <div class="trainer-rank d-flex align-items-center">
-                  
+
                   </div>
                 </div>
               </div>
@@ -83,10 +101,10 @@
                 <p>El ejercicio está constituido en un conjunto armonioso de movimientos que entrelazan posiciones de equilibrio, volteos y saltos, agrupados a un patrón rítmico con fondo musical.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
-                    
+
                   </div>
                   <div class="trainer-rank d-flex align-items-center">
-                    
+
                   </div>
                 </div>
               </div>
@@ -100,9 +118,10 @@
 
   </main><!-- End #main -->
 
-<!-- Footer -->
-	<?php include 'footer.php';?>
-<!-- End Footer -->
+  <!-- Footer -->
+  <?php include 'footer.php'; ?>
+  <!-- End Footer -->
 
 </body>
+
 </html>
