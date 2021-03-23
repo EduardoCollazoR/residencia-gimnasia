@@ -1,24 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Inicio</title>
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link href="assets/css/style2.css" rel="stylesheet">
-</head>
-<body>
-<!-- ======= Header ======= -->
-  <?php include 'navbar.php';?>
-<!-- End Header -->
-
-<!-- ======= Login ======= -->
-  <?php include 'login.php';?>
-<!-- End Login -->
-
-
 <main id="main">
 
   <!-- ======= Breadcrumbs ======= -->
@@ -30,45 +9,45 @@
     </div>
   </div><!-- End Breadcrumbs -->
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>Gimnasia Artistica Femenina</h2>
-          <p>Evaluacion Unidad 3:</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>La Gimnasia Artística Femenina es la modalidad gimnástico-deportiva prácticada por el género femenino.</h3>
-            <p>
-              En esta tercera evaluacion la gimnasta debera practicar algunos de los ejercicios vistos anteriormente. Estos ejercicios seran brindados por el entrenador de la gimnasta, sin embargo, debe practicarse unicamente bajo la supervision de un adulto. 
-            </p>
-            <p>
-              El entrenador no debera aplicar ejercicios dificiles, en el cual la gimnasta no pueda representarlos desde casa. Algunos de los ejercicios aceptados son los siguientes:
-            </p>
-
-            <ul>
-              <li><i class="icofont-check-circled"></i> Ejercicios Bases.</li>
-              <li><i class="icofont-check-circled"></i> Ejercicios de Manos libres.</li>
-            </ul>
-          </div>
-        </div>
-
+      <div class="section-title">
+        <h2>Gimnasia Artistica Femenina</h2>
+        <p>Evaluacion Unidad 3:</p>
       </div>
-    
+
+      <div class="row">
+        <div class="col-lg pt-4 pt-lg-0 order-2 order-lg-1 content">
+          <h3>La Gimnasia Artística Femenina es la modalidad gimnástico-deportiva prácticada por el género femenino.</h3>
+          <p>
+            En esta tercera evaluacion la gimnasta debera practicar algunos de los ejercicios vistos anteriormente. Estos ejercicios seran brindados por el entrenador de la gimnasta, sin embargo, debe practicarse unicamente bajo la supervision de un adulto.
+          </p>
+          <p>
+            El entrenador no debera aplicar ejercicios dificiles, en el cual la gimnasta no pueda representarlos desde casa. Algunos de los ejercicios aceptados son los siguientes:
+          </p>
+
+          <ul>
+            <li><i class="icofont-check-circled"></i> Ejercicios Bases.</li>
+            <li><i class="icofont-check-circled"></i> Ejercicios de Manos libres.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
     <div class="row" style="margin-left: 45%;">
       <div class="col-lg-6">
         <div class="input-group">
-          <span class="input-group-btn"> 
+          <span class="input-group-btn">
             <button class="get-started-btn" type="button" data-toggle="modal" data-target="#livestream_scanner">scan
               <i class="fa fa-barcode"></i>
             </button>
           </span>
-        </div>  <!-- /input-group -->
-      </div>  <!-- /.col-lg-6 -->
-    </div>  <!-- /.row -->
+        </div> <!-- /input-group -->
+      </div> <!-- /.col-lg-6 -->
+    </div> <!-- /.row -->
 
     <div class="modal" id="livestream_scanner">
       <div class="modal-dialog">
@@ -82,37 +61,33 @@
           <div class="modal-body" style="position: static;">
             <video autoplay="true" id="interactive-video" class="interactive-video"></video>
           </div>
-            <div class="modal-footer">
-              <button type="button" class="get-started-btn" data-dismiss="modal">Close</button>
-            </div>
-          </div> <!-- /.modal-content -->
+          <div class="modal-footer">
+            <button type="button" class="get-started-btn" data-dismiss="modal">Close</button>
+          </div>
+        </div> <!-- /.modal-content -->
       </div> <!-- /.modal-dialog -->
     </div> <!-- /.modal -->
   </section>
 
 
-    
-  </main><!-- End #main -->
 
-<!-- Footer -->
-  <?php include 'footer.php';?>
-<!-- End Footer -->
+</main><!-- End #main -->
 
-</body>
 
-</html>
 
 <script type="text/javascript">
-  $('#livestream_scanner').on('shown.bs.modal', function (e) {
+  $('#livestream_scanner').on('shown.bs.modal', function(e) {
     var video = document.querySelector("#interactive-video");
     if (navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices.getUserMedia({ video: true })
-      .then(function (stream) {
-        video.srcObject = stream;
-      })
-      .catch(function (error) {
-        console.log("Something went wrong!");
-      });
+      navigator.mediaDevices.getUserMedia({
+          video: true
+        })
+        .then(function(stream) {
+          video.srcObject = stream;
+        })
+        .catch(function(error) {
+          console.log("Something went wrong!");
+        });
     }
   });
 </script>

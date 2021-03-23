@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Cursos</title>
     <link rel="stylesheet" href="FormEstilos.css">
 </head>
+
 <body>
-<script src="jquery.js"></script>
-<script src="jquery.knob.js"></script>
+    <script src="jquery.js"></script>
+    <script src="jquery.knob.js"></script>
 
-<!-- ======= Header ======= -->
-	<?php include 'navbar.php';?>
-<!-- End Header -->
+    <!-- ======= Header ======= -->
+    <?php include 'navbar.php'; ?>
+    <!-- End Header -->
 
-<!-- ======= Login ======= -->
-	<?php include 'login.php';?>
-<!-- End Login -->
+    <!-- ======= Login ======= -->
+    <?php include 'login.php'; ?>
+    <!-- End Login -->
 
 
-	  <main id="main" data-aos="fade-in">
+    <main id="main" data-aos="fade-in">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs">
-      <div class="container">
-        <h2>Test Unidad 1:  Historia de la gimnasia en México</h2>
-        </div>
-    </div><!-- End Breadcrumbs -->
+        <!-- ======= Breadcrumbs ======= -->
+        <div class="breadcrumbs">
+            <div class="container">
+                <h2>Test Unidad 1: Historia de la gimnasia en México</h2>
+            </div>
+        </div><!-- End Breadcrumbs -->
 
-    <!-- ======= Courses Section ======= -->
-    <section id="courses" style="text-align:center;">
-    <div class="contenedor" class="col-md-9" role="main" >
-   
-        <div class="question"></div>
-        <br>
-        <input type="text" value="30" class="dial">
-        <br>
-        <br>
-        <p class="rightCounter_">Answer Right <span class="rightCounter"> 0 </span> Answer wrong <span
-                class="wrongCounter">
-                0 </span></p>
+        <!-- ======= Courses Section ======= -->
+        <section id="courses" style="text-align:center;">
+            <div class="contenedor" class="col-md-9" role="main">
 
-    <button  type="button" class="btnOption"  onclick="window.location.href='Unidad1.php'"><h6> Salir</h6></button>
-    </div>    
-    </section><!-- End Courses Section -->
+                <div class="question"></div>
+                <br>
+                <input type="text" value="30" class="dial">
+                <br>
+                <br>
+                <p class="rightCounter_">Answer Right <span class="rightCounter"> 0 </span> Answer wrong <span class="wrongCounter">
+                        0 </span></p>
 
-</main><!-- End #main -->
+                <button type="button" class="btnOption" onclick="window.location.href='Unidad1.php'">
+                    <h6> Salir</h6>
+                </button>
+            </div>
+        </section><!-- End Courses Section -->
+
+    </main><!-- End #main -->
 
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             //$(".dial").knob();
             $('.dial').knob({
                 'min': 1,
@@ -68,13 +71,13 @@
         let timeInterval;
         let timeAns = 5;
         let timeIntervalAns;
-        const cuestionary = [
-            {
+        const cuestionary = [{
                 "question": "Los inicios de la gimnasia en México fueron principalmente ",
                 "img": "assets/img/Uni1/acrobatas_aztecas_unegimnasia.jpg",
                 "answers": ["Durante los s. XVIII y XIX",
                     "Durante los s. XVII y XVIII",
-                    "Durante los s. XVI y XIX"]
+                    "Durante los s. XVI y XIX"
+                ]
             },
             {
                 "question": "La gimnasia artística varonil mexicana debutó en los Juegos Centroamericanos y del Caribe a partir de la ",
@@ -86,7 +89,7 @@
                 "img": "assets/img/Uni1/1532348458_445118_1532401623_noticia_normal.jpg",
                 "answers": ["Nueve  medallas individuales y una más por equipos", "Diez medallas individuales y una más por equipos", "Nueve  medallas individuales y dos más por equipos"]
             }
-         
+
         ];
 
 
@@ -109,7 +112,9 @@
             clearInterval(timeInterval);
             timeInterval = setInterval(() => {
                 if (time <= 10) {
-                    $('.dial').trigger('configure', { "fgColor": "#65a841" })
+                    $('.dial').trigger('configure', {
+                        "fgColor": "#65a841"
+                    })
                 }
                 if (time == 0) {
                     alert("Pregunta no respondida")
@@ -117,8 +122,7 @@
                     document.querySelector('.wrongCounter').innerHTML = wrongAnswers;
                     PrintHTMLQuestion(currentQuestionIndex)
                     clearInterval(timeInterval);
-                }
-                else {
+                } else {
                     $("input.dial").val(time);
                     $("input.dial").trigger('change');
 
@@ -129,7 +133,7 @@
         }
         PrintHTMLQuestion(currentQuestionIndex)
         const evaluateAnswer = (answer, obj) => {
-            
+
             document.querySelectorAll('.answer').forEach(a => a.classList.remove('right', 'wrong'))
 
             const parentP = obj.parentNode;
@@ -150,8 +154,7 @@
                     }
 
                 }, 1000)
-            }
-            else {
+            } else {
 
                 parentP.classList.add('wrong');
                 wrongAnswers++;
@@ -177,23 +180,21 @@
                 }, 1000)
 
             }
-         
-      
-    }
+
+
+        }
         const nextQuestion = _ => {
 
         }
-
-
-
     </script>
-      
 
 
-<!-- Footer -->
-	<?php include 'footer.php';?>
-<!-- End Footer -->
-<script src="jquery.js"></script>
-<script src="jquery.knob.js"></script>
+
+    <!-- Footer -->
+    <?php include 'footer.php'; ?>
+    <!-- End Footer -->
+    <script src="jquery.js"></script>
+    <script src="jquery.knob.js"></script>
 </body>
+
 </html>
