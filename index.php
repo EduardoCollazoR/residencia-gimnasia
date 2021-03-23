@@ -1,3 +1,8 @@
+<?php
+
+require 'includes/funciones.php';
+incluirTemplate('header');
+?>
 <main id="main">
 
   <!-- ======= About Section ======= -->
@@ -166,3 +171,6 @@
 
 
 </main><!-- End #main -->
+<?php
+incluirTemplate('footer');
+?>

@@ -26,19 +26,6 @@
 
 <body>
     <!-- ======= Header ======= -->
-    <?php include 'navbar.php'; ?>
-    <!-- End Header -->
-    <!-- ======= Preloader======= -->
-    <div id="preloader"></div>
-    <!-- End Header -->
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex justify-content-center align-items-center">
-        <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-            <h1>Practicamos hoy,<br>Sobresalimos mañana</h1>
-            <h2>Somos un equipo de gimnastas talentosas en desarrollo de este deporte</h2>
-        </div>
-    </section><!-- End Hero -->
-    <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
 
@@ -62,3 +49,14 @@
 
         </div>
     </header><!-- End Header -->
+    <!-- End Header -->
+    <!-- ======= Preloader======= -->
+    <div id="preloader"></div>
+    <!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex justify-content-center align-items-center">
+        <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+            <h1>Practicamos hoy,<br>Sobresalimos mañana</h1>
+            <h2>Somos un equipo de gimnastas talentosas en desarrollo de este deporte</h2>
+        </div>
+    </section><!-- End Hero -->
