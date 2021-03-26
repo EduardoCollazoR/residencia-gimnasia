@@ -33,7 +33,7 @@
 
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                    <li class="active"><a href="index.php">Inicio</a></li>
+                    <li><a href="index.php">Inicio</a></li>
                     <li><a href="about.php">Acerca de</a></li>
                     <li><a href="cursos.php">Cursos</a></li>
                     <li><a href="auxilios.php">Auxilios</a></li>
@@ -51,12 +51,17 @@
     </header><!-- End Header -->
     <!-- End Header -->
     <!-- ======= Preloader======= -->
-    <div id="preloader"></div>
+    <?php if ($inicio === true) : ?>
+        <div id="preloader"></div>
+    <?php endif; ?>
     <!-- End Header -->
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex justify-content-center align-items-center">
-        <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-            <h1>Practicamos hoy,<br>Sobresalimos mañana</h1>
-            <h2>Somos un equipo de gimnastas talentosas en desarrollo de este deporte</h2>
-        </div>
-    </section><!-- End Hero -->
+
+    <?php if ($inicio === true) : ?>
+        <section id="hero" class="d-flex justify-content-center align-items-center">
+            <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+                <h1>Practicamos hoy,<br>Sobresalimos mañana</h1>
+                <h2>Somos un equipo de gimnastas talentosas en desarrollo de este deporte</h2>
+            </div>
+        </section><!-- End Hero -->
+    <?php endif; ?>

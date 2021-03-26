@@ -1,3 +1,8 @@
+<?php
+
+require 'includes/funciones.php';
+incluirTemplate('header');
+?>
 <main id="main">
 
   <!-- ======= Breadcrumbs ======= -->
@@ -84,3 +89,6 @@
     </div>
   </section><!-- End Contact Section -->
 </main>
+<?php
+incluirTemplate('footer');
+?>

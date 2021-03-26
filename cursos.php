@@ -1,3 +1,8 @@
+<?php
+
+require 'includes/funciones.php';
+incluirTemplate('header');
+?>
 <main id="main" data-aos="fade-in">
 
   <!-- ======= Breadcrumbs ======= -->
@@ -84,3 +89,6 @@
   </section><!-- End Courses Section -->
 
 </main><!-- End #main -->
+<?php
+incluirTemplate('footer');
+?>
