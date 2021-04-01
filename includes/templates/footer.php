@@ -46,9 +46,9 @@
             <div class="copyright">
                 &copy; Copyright <strong><span>Gimnasia Artistica Femenil</span></strong>. Todos Derechos Reservados
             </div>
-            <div class="credits">
+            <!-- <div class="credits">
                 Diseñado por <a href="#">Maryuri Chavez, Karen Morales, Gibran Madera, Alejandro Lopez</a>
-            </div>
+            </div> -->
         </div>
         <div class="social-links text-center text-md-right pt-3 pt-md-0">
             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
