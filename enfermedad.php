@@ -16,6 +16,7 @@ incluirTemplate('header');
   <section id="contact" class="contact">
 
 
+<<<<<<< HEAD
     <div class="container" data-aos="fade-up">
 
       <div class="center-form">
@@ -67,15 +68,71 @@ incluirTemplate('header');
             <div class="text-center "><button type="submit">Guardar</button></div><br>
             <div class="text-center "><button type="submit">Siguiente</button></div>
           </form>
+=======
+<div class="container" data-aos="fade-up">
+>>>>>>> 30f5e7d5e00e6266a933f8e31ec8dc3b5d4ccd6c
 
+  <div class="center-form">
+    <div class="col-lg-4 mt-lg-0 ">
+    <!--  -->
+      <form action=" " method="post" role="form" class="php-email-form">
+        <div class="form-group">
+          <label class="control-label">¿Tienes alguna enfermedad como diabetes, hipertencion, artritis o una enfermedad en los riñones?</label>
+          <input class="opcion" type="radio" name="opcion" class="form-control" id="opcion">Si <br>
+          <input  class="opcion" type="radio" name="opcion" class="form-control" id="opcion">No
+          <div class="validate"></div>
         </div>
-
-      </div>
+        <div class=" form-group">
+          <label class="control-label">¿Que enfermedad tienes?</label>
+          <input type="text" class="form-control" name="enfermedad" id="enfermedad" placeholder="diabetes" />
+          <div class="validate"></div>
+        </div>
+        <div class=" form-group">
+          <label class="control-label">¿Has tenido alguna lesion?</label><br>
+          <input class="opcion" type="radio" name="opcion" class="form-control" id="opcion">Si <br>
+          <input  class="opcion" type="radio" name="opcion" class="form-control" id="opcion">No
+          <div class="validate"></div>
+        </div>
+        <div class=" form-group">
+          <label class="control-label">¿Que lesion tuviste?</label>
+          <input type="text" class="form-control" name="lesion" id="lesion" placeholder="Dislocacion del hombro"  />
+          <div class="validate"></div>
+        </div>
+        <div class=" form-group">
+          <label class="control-label">¿Cual es la fecha que tuviste tu lesion?</label>
+          <input type="date" class="form-control" name="fechalesion" id="fechalesion"  />
+          <div class="validate"></div>
+        </div>
+        <div class=" form-group">
+          <label class="control-label">¿Llevaste rehabilitacion debido a la lesion?</label><br>
+          <input class="opcion" type="radio" name="opcion" class="form-control" id="opcion">Si <br>
+          <input  class="opcion" type="radio" name="opcion" class="form-control" id="opcion">No
+          <div class="validate"></div>
+        </div>
+        <div class=" form-group">
+          <label class="control-label">¿Cuanto tiempo duro tu rehabilitacion?</label>
+          <input type="text" class="form-control" name="tiempoRehabilitacion" id="tiempoRehabilitacion" placeholder="1 mes"  />
+          <div class="validate"></div>
+        </div>
+    
+        <div class="mb-3">
+          <div class="loading">Cargando...</div>
+          <div class="error-message"></div>
+          <!-- <div class="sent-message">Haz Iniciado Sesion Correctamente. Bienvenido!</div> -->
+        </div>
+        <!-- class="get-started-btn btn" -->
+        <div class="text-center "><button type="submit" >Guardar</button></div><br>
+        <div class="text-center "><button type="submit"  >Siguiente</button></div>
+      </form>
 
     </div>
 
-    </div>
-  </section><!-- End Contact Section -->
+  </div>
+
+</div>
+
+</div>
+</section><!-- End Contact Section -->
 
 
 
