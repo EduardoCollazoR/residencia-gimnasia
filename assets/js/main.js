@@ -1,12 +1,12 @@
-!(function ($) {
+!(function($) {
   "use strict";
 
   // Preloader
-  $(window).on("load", function () {
+  $(window).on("load", function() {
     if ($("#preloader").length) {
       $("#preloader")
         .delay(100)
-        .fadeOut("slow", function () {
+        .fadeOut("slow", function() {
           $(this).remove();
         });
     }
@@ -17,10 +17,10 @@
   $(document).on(
     "click",
     ".nav-menu a, .mobile-nav a, .scrollto",
-    function (e) {
+    function(e) {
       if (
         location.pathname.replace(/^\//, "") ==
-          this.pathname.replace(/^\//, "") &&
+        this.pathname.replace(/^\//, "") &&
         location.hostname == this.hostname
       ) {
         var target = $(this.hash);
@@ -33,8 +33,7 @@
             scrollto = 0;
           }
 
-          $("html, body").animate(
-            {
+          $("html, body").animate({
               scrollTop: scrollto,
             },
             1500,
@@ -60,13 +59,12 @@
   );
 
   // Activate smooth scroll on page load with hash links in the url
-  $(document).ready(function () {
+  $(document).ready(function() {
     if (window.location.hash) {
       var initial_nav = window.location.hash;
       if ($(initial_nav).length) {
         var scrollto = $(initial_nav).offset().top - scrolltoOffset;
-        $("html, body").animate(
-          {
+        $("html, body").animate({
             scrollTop: scrollto,
           },
           1500,
@@ -87,7 +85,7 @@
     );
     $("body").append('<div class="mobile-nav-overly"></div>');
 
-    $(document).on("click", ".mobile-nav-toggle", function (e) {
+    $(document).on("click", ".mobile-nav-toggle", function(e) {
       $("body").toggleClass("mobile-nav-active");
       $(".mobile-nav-toggle i").toggleClass(
         "icofont-navigation-menu icofont-close"
@@ -95,13 +93,13 @@
       $(".mobile-nav-overly").toggle();
     });
 
-    $(document).on("click", ".mobile-nav .drop-down > a", function (e) {
+    $(document).on("click", ".mobile-nav .drop-down > a", function(e) {
       e.preventDefault();
       $(this).next().slideToggle(300);
       $(this).parent().toggleClass("active");
     });
 
-    $(document).click(function (e) {
+    $(document).click(function(e) {
       var container = $(".mobile-nav, .mobile-nav-toggle");
       if (!container.is(e.target) && container.has(e.target).length === 0) {
         if ($("body").hasClass("mobile-nav-active")) {
@@ -118,7 +116,7 @@
   }
 
   // Back to top button
-  $(window).scroll(function () {
+  $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $(".back-to-top").fadeIn("slow");
     } else {
@@ -126,9 +124,8 @@
     }
   });
 
-  $(".back-to-top").click(function () {
-    $("html, body").animate(
-      {
+  $(".back-to-top").click(function() {
+    $("html, body").animate({
         scrollTop: 0,
       },
       1500,
@@ -161,8 +158,15 @@
     },
   });
 
+  //Menu activo
+  // $('body.index .nav-menu a: contains("Inicio")').addClass('active');
+  // $('body.about .nav-menu  ul li ').addClass('active');
+  // $('body.cursos .nav-menu  ul li').addClass('active');
+  // $('body.contacto .nav-menu  ul li ').addClass('active');
+  // $('body.auxilios .nav-menu  ul li ').addClass('active');
+
   // Init AOS
-  $(window).on("load", function () {
+  $(window).on("load", function() {
     AOS.init({
       duration: 1000,
       once: true,

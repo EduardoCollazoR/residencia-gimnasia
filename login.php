@@ -1,9 +1,6 @@
 <?php
-
-
-
 require 'includes/funciones.php';
-incluirTemplate('header');
+incluirTemplate('header', $inicio = false, $login = false);
 ?>
 
 
@@ -20,28 +17,19 @@ incluirTemplate('header');
 <section id="contact" class="contact">
   <div class="container" data-aos="fade-up">
     <div class="center-form">
-
       <div class="col-lg-4 mt-lg-0 ">
-        <form method="POST" role="form" class="php-email-form" action="/login.php">
+        <form action="" role="form" class="form" onsubmit="return validar()">
           <div class="form-group">
             <label class="control-label">Correo Electronico</label>
-            <input type="email" name="email" class="form-control" id="email" data-msg="Por favor ingresa un correo electronico valido" />
-            <div class="validate"></div>
+            <input type="email" name="email" class="form-control" id="email" />
           </div>
           <div class=" form-group">
             <label class="control-label">Contraseña</label>
-            <input type="password" class="form-control" name="password" id="password" data-msg="Por favor ingresa una contraseña" />
-            <div class="validate"></div>
+            <input type="password" name="password" class="form-control" id="password" />
           </div>
-          <?php
-          foreach ($errores as $error) : ?>
-            <div class="alert alert-dismissible alert-danger">
-              <button class="close" type="button" data-dismiss="alert">×</button><a class="alert-link" href="#"></a> <?php echo $error ?>
-            </div>
-          <?php endforeach; ?>
-
+          <div id="message"></div>
           <div class="text-center ">
-            <input type="submit" class="get-started-btn btn" value="Iniciar Sesion">
+            <div class="text-center"><button class="get-started-btn btn" type="button" id="login">Iniciar Sesion</button></div>
           </div>
       </div>
     </div>
@@ -54,7 +42,6 @@ incluirTemplate('header');
     </div>
   </div>
   </div>
-
   </div>
 </section><!-- End Contact Section -->
 

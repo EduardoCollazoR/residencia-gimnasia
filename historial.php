@@ -11,7 +11,7 @@ incluirTemplate('header');
       <h2>Historial Medico</h2>
     </div>
   </div><!-- End Breadcrumbs -->
- 
+
   <!-- ======= Contact Section ======= -->
   <section id="contact" class="contact">
 
@@ -20,8 +20,8 @@ incluirTemplate('header');
 
       <div class="center-form">
         <div class="col-lg-4 mt-lg-0 ">
-        <!--  -->
-          <form action=" " method="post" role="form" class="php-email-form">
+          <!--  -->
+          <form action=" " method="post" role="form" class="form">
             <div class="form-group">
               <label class="control-label">¿Cual es tu nombre completo?</label>
               <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" />
@@ -34,43 +34,43 @@ incluirTemplate('header');
             </div>
             <div class=" form-group">
               <label class="control-label">¿Cual es tu genero?</label>
-              <input type="text" class="form-control" name="sexo" id="sexo" placeholder="Masculino/Femenino"  />
+              <input type="text" class="form-control" name="sexo" id="sexo" placeholder="Masculino/Femenino" />
               <div class="validate"></div>
             </div>
             <div class=" form-group">
               <label class="control-label">¿Cual es tu estatura?(en metros)</label>
-              <input type="number" class="form-control" name="estatura" id="estatura" placeholder="160"  />
+              <input type="number" class="form-control" name="estatura" id="estatura" placeholder="160" />
               <div class="validate"></div>
             </div>
             <div class=" form-group">
               <label class="control-label">¿Cual es tu peso?(en kg)</label>
-              <input type="number" class="form-control" name="peso" id="peso" placeholder="50"  />
+              <input type="number" class="form-control" name="peso" id="peso" placeholder="50" />
               <div class="validate"></div>
             </div>
             <div class=" form-group">
               <label class="control-label">¿Cual es tu grado academico?</label>
-              <input type="text" class="form-control" name="estudio" id="estudio" placeholder="Primaria"  />
+              <input type="text" class="form-control" name="estudio" id="estudio" placeholder="Primaria" />
               <div class="validate"></div>
             </div>
             <div class=" form-group">
               <label class="control-label">¿Has tenido alguna cirugia?</label>
-              <input type="text" class="form-control" name="opcion" id="opcion" placeholder="SI/NO"  />
+              <input type="text" class="form-control" name="opcion" id="opcion" placeholder="SI/NO" />
               <div class="validate"></div>
             </div>
             <div class=" form-group">
               <label class="control-label">¿Que cirugia tuviste?</label>
-              <input type="text" class="form-control" name="cirugia" id="cirugia" placeholder="cirugia por hernia umbilical"  />
+              <input type="text" class="form-control" name="cirugia" id="cirugia" placeholder="cirugia por hernia umbilical" />
               <div class="validate"></div>
             </div>
-        
+
             <div class="mb-3">
               <div class="loading">Cargando...</div>
               <div class="error-message"></div>
               <!-- <div class="sent-message">Haz Iniciado Sesion Correctamente. Bienvenido!</div> -->
             </div>
             <!-- class="get-started-btn btn" -->
-            <div class="text-center "><button type="submit" >Guardar</button></div><br>
-            <div class="text-center "><button type="submit" onclick="location.href= 'enfermedad.php'" >Siguiente</button></div>
+            <div class="text-center "><button type="submit">Guardar</button></div><br>
+            <div class="text-center "><button type="submit" onclick="location.href= 'enfermedad.php'">Siguiente</button></div>
           </form>
 
         </div>

@@ -1,7 +1,7 @@
 <?php
 
 require 'includes/funciones.php';
-incluirTemplate('header', $inicio = true, $activo = true);
+incluirTemplate('header', $inicio = true, $login = true);
 ?>
 <main id="main">
 

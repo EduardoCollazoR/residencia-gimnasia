@@ -22,6 +22,9 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <?php $archivo = basename($_SERVER['PHP_SELF']);
+    $pagina = str_replace(".php", "", $archivo);
+    ?>
 </head>
 
 <body>
@@ -41,12 +44,10 @@
                 </ul>
             </nav><!-- .nav-menu -->
 
-
             <!-- Button trigger modal -->
-
-            <a class="get-started-btn btn" href="login.php">Iniciar Sesion</a>
-
-
+            <?php if ($login !== false) : ?>
+                <a class="get-started-btn btn" href="login.php">Iniciar Sesion</a>
+            <?php endif; ?>
         </div>
     </header><!-- End Header -->
     <!-- End Header -->

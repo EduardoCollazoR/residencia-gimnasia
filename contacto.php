@@ -55,7 +55,7 @@ incluirTemplate('header');
 
         <div class="col-lg-8 mt-5 mt-lg-0">
 
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <form action="forms/contact.php" method="post" role="form" class="form">
             <div class="form-row">
               <div class="col-md-6 form-group">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:3" data-msg="Por favor ingresa minimo 3 letras" />
