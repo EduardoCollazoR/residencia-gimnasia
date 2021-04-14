@@ -72,7 +72,9 @@
 <script src="assets/vendor/aos/aos.js"></script>
 </body>
 <!-- Template Main JS File -->
+
 <script src="assets/js/login.js"></script>
+<script src="assets/js/register.js"></script>
 <script src="assets/js/main.js"></script>
 
 </html>

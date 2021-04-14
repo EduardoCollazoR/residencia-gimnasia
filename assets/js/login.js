@@ -21,8 +21,7 @@ function login() {
 
       if (data.indexOf("Entrenador") >= 0) {
         window.location = "entrenador/";
-      }
-      if (data.indexOf("Estudiante") >= 0) {
+      } else {
         window.location = "estudiante/";
       }
     },

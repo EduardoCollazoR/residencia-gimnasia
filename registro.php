@@ -18,20 +18,20 @@ incluirTemplate('header');
         <div class="container" data-aos="fade-up">
             <div class="center-form">
                 <div class="col-lg-8 mt-lg-0">
-                    <form action="" method="POST" role="form" class="form">
+                    <form action="" onsubmit="return validar()" role="form" class="form">
                         <div class="form-row">
                             <div class="col-sm form-group">
                                 <label class="control-label">Nombre</label>
-                                <input type="text" name="name" class="form-control" id="name" />
+                                <input type="text" name="nombre" class="form-control" id="nombre" />
                             </div>
                             <div class="col-sm form-group">
                                 <label class="control-label">Apellido Paterno</label>
-                                <input type="text" class="form-control" name="email" id="email" />
+                                <input type="text" class="form-control" name="apellidoP" id="apellidoP" />
 
                             </div>
                             <div class="col-sm  form-group">
                                 <label class="control-label">Apellido Materno</label>
-                                <input type="text" class="form-control" name="email" id="email" />
+                                <input type="text" class="form-control" name="apellidoM" id="apellidoM" />
 
                             </div>
                         </div>
@@ -43,7 +43,7 @@ incluirTemplate('header');
                             </div>
                             <div class="col-sm form-group">
                                 <label class="control-label">Fecha de Nacimiento</label>
-                                <input type="date" class="form-control" name="email" id="email" />
+                                <input type="date" class="form-control" name="fecha" id="fecha" />
 
                             </div>
 
@@ -53,7 +53,7 @@ incluirTemplate('header');
                         <div class="form-row">
                             <div class="col-sm form-group">
                                 <label class="control-label">Tipo de Usuario</label>
-                                <select class="form-control">
+                                <select class="form-control" id="rol" name="rol">
                                     <option value="1">Entrenador</option>
                                     <option value="2">Estudiante</option>
                                 </select>
@@ -61,12 +61,13 @@ incluirTemplate('header');
                             <div class="col-sm form-group">
                                 <label class="control-label">Contraseña</label>
                                 <input type="password" name="password" class="form-control" id="password" />
-
                             </div>
+                        </div>
+                        <div id="message"></div>
+                        <div class="text-center">
+                            <button id="register" class="get-started-btn btn" type="button">Registrarme</button>
 
                         </div>
-
-                        <div class="text-center"><button class="get-started-btn btn" type="submit">Registrarme</button></div>
                     </form>
 
                 </div>
