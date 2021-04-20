@@ -1,3 +1,9 @@
+<?php
+
+require 'includes/funciones.php';
+incluirTemplate('header');
+?>
+
 <!-- ======= Breadcrumbs ======= -->
 <div class="breadcrumbs" data-aos="fade-in">
   <div class="container">
@@ -128,3 +134,6 @@
 
 
 </main><!-- End #main -->
+<?php
+incluirTemplate('footer');
+?>

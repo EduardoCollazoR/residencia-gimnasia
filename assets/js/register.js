@@ -10,6 +10,9 @@ function register() {
   var apellidoM = $("#apellidoM").val();
   var fecha = $("#fecha").val();
   var email = $("#email").val();
+  var ciudad =$("#ciudad").val();
+  var asociacion =$("#asociacion").val();
+  var direccion =$("#direccion").val();
   var password = $("#password").val();
   var rol = $("#rol").val();
 
@@ -27,6 +30,9 @@ function register() {
       apellidoM: apellidoM,
       fecha: fecha,
       email: email,
+      ciudad:ciudad,
+      asociacion:asociacion,
+      direccion:direccion,
       password: password,
       rol: rol,
     },
@@ -37,8 +43,11 @@ function register() {
         $('#nombre').val("");
         $('#apellidoP').val("");
         $('#apellidoM').val("");
-        $('#email').val("");
         $('#fecha').val("");
+        $('#email').val("");
+        $('#ciudad').val("");
+        $('#asociacion').val("");
+        $('#direccion').val("");
         $('#rol').val("");
         $('#password').val("");
       }

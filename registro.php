@@ -49,6 +49,30 @@ incluirTemplate('header');
 
                         </div>
 
+                        <div class="form-row">
+                            <div class="col-sm form-group">
+                                 <label class="control-label">Ciudad</label>
+                                <input type="text" name="ciudad" class="form-control" id="ciudad" />
+
+                            </div>
+                            <div class="col-sm form-group">
+                                <label class="control-label">Asociacion</label>
+                                <input type="text" name="asociacion" class="form-control" id="asociacion" />
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-sm form-group">
+                                <label class="control-label">Direccion</label>
+                                <input type="text" name="direccion" class="form-control" id="direccion" />
+
+                            </div>
+                           
+
+                        </div>
+
 
                         <div class="form-row">
                             <div class="col-sm form-group">

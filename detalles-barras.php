@@ -1,3 +1,8 @@
+<?php
+
+require 'includes/funciones.php';
+incluirTemplate('header');
+?>
 <main id="main">
 
   <!-- ======= Breadcrumbs ======= -->
@@ -37,3 +42,6 @@
 
 
 </main><!-- End #main -->
+<?php
+incluirTemplate('footer');
+?>

@@ -21,10 +21,18 @@ if (!empty($_POST)) {
 
     if ($query->rowCount() > 0) {
       if (password_verify($password, $result['Clave'])) {
-
+    
         if ($result['descripcion'] == "Entrenador") {
+          session_start();
+                $_SESSION['nombre'] = $result['Nombre'];
+                // $_SESSION['id'] = $;
+                $_SESSION['login'] = true;
           echo '<div class="alert alert-dismissible alert-success"><strong>Entrenador</strong></div>';
-        } else {
+        } else  {
+          session_start();
+                $_SESSION['nombre'] = $result['Nombre'];
+                // $_SESSION['id'] = $;
+                $_SESSION['login'] = true;
           echo '<div class="alert alert-dismissible alert-success"><strong>Alumno</strong></div>';
         }
       } else {

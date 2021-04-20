@@ -12,7 +12,7 @@
 
 $host = 'localhost';
 $user = 'root';
-$db = 'gym';
+$db = 'gim';
 $pass = 'root';
 
 try {

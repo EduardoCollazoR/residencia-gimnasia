@@ -3,7 +3,7 @@
 require '../config/database.php';
 
 if (!empty($_POST)) {
-    if (empty($_POST['nombre']) || empty($_POST['apellidoP']) || empty($_POST['apellidoM']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['rol']) || empty($_POST['fecha'])) {
+    if (empty($_POST['nombre']) || empty($_POST['apellidoP']) || empty($_POST['apellidoM']) || empty($_POST['email']) || empty($_POST['ciudad']) || empty($_POST['direccion'])|| empty($_POST['password']) || empty($_POST['rol']) || empty($_POST['fecha'])) {
         echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
    Completa todos los campos.
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -16,6 +16,9 @@ if (!empty($_POST)) {
         $apelllidom = filter_var($_POST['apellidoM'], FILTER_SANITIZE_STRING);
         $fecha = filter_var($_POST['fecha'], FILTER_SANITIZE_STRING);
         $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+        $ciudad = filter_var($_POST['ciudad'], FILTER_SANITIZE_EMAIL);
+        $asociacion = filter_var($_POST['asociacion'], FILTER_SANITIZE_EMAIL);
+        $direccion = filter_var($_POST['direccion'], FILTER_SANITIZE_EMAIL);
         $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
         $rol = filter_var($_POST['rol'], FILTER_SANITIZE_NUMBER_INT);
 
@@ -70,9 +73,9 @@ if (!empty($_POST)) {
 </div>';
         } else {
 
-            $sqlInsert = "INSERT INTO usuario (Nombre,ApellidoP,ApellidoM,FechaNacimiento,Email,Clave,IdRol) VALUES(?,?,?,?,?,?,?)";
+            $sqlInsert = "INSERT INTO usuario (Nombre,ApellidoP,ApellidoM,FechaNacimiento,Email,Clave,Ciudad,Asociacion,Direccion,IdRol) VALUES(?,?,?,?,?,?,?,?,?,?)";
             $queryInsert = $pdo->prepare($sqlInsert);
-            $resultInsert = $queryInsert->execute(array($nombre, $apelllidop, $apelllidom, $fecha, $email, $password, $rol));
+            $resultInsert = $queryInsert->execute(array($nombre, $apelllidop, $apelllidom, $fecha, $email, $password,$ciudad,$asociacion,$direccion, $rol));
 
 
             if ($resultInsert) {
