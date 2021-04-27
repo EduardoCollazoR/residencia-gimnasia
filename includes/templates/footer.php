@@ -70,11 +70,13 @@
 <script src="assets/vendor/counterup/counterup.min.js"></script>
 <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 <script src="assets/vendor/aos/aos.js"></script>
-</body>
+<!-- <script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/jquery.knob.js"></script> -->
 <!-- Template Main JS File -->
-
 <script src="assets/js/login.js"></script>
 <script src="assets/js/register.js"></script>
 <script src="assets/js/main.js"></script>
+</body>
+
 
 </html>

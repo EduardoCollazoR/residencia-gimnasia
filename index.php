@@ -1,7 +1,15 @@
 <?php
 
+session_start();
+if (!empty($_SESSION['active'])) {
+    header('Location:trainer/');
+} else if (!empty($_SESSION['activeP'])) {
+    header('Location:student/');
+} 
+
 require 'includes/funciones.php';
 incluirTemplate('header', $inicio = true, $login = true);
+
 ?>
 <main id="main">
 

@@ -20,9 +20,9 @@ function login() {
       $("#message").html(data);
 
       if (data.indexOf("Entrenador") >= 0) {
-        window.location = "entrenador/";
+        window.location = "trainer/";
       } else {
-        window.location = "estudiante/";
+        window.location = "student/";
       }
     },
   });

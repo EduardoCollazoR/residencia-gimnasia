@@ -1,4 +1,6 @@
 <?php
+// Con esto se pueden hacer variables de session
+session_start();
 
 if (!empty($_POST)) {
   if (empty($_POST['email']) || empty($_POST['password'])) {
@@ -21,18 +23,13 @@ if (!empty($_POST)) {
 
     if ($query->rowCount() > 0) {
       if (password_verify($password, $result['Clave'])) {
-    
+
         if ($result['descripcion'] == "Entrenador") {
-          session_start();
-                $_SESSION['nombre'] = $result['Nombre'];
-                // $_SESSION['id'] = $;
-                $_SESSION['login'] = true;
+         // $_SESSION['nombre']=$result('Nombre');
+          // $_SESSION['active']=true;
           echo '<div class="alert alert-dismissible alert-success"><strong>Entrenador</strong></div>';
-        } else  {
-          session_start();
-                $_SESSION['nombre'] = $result['Nombre'];
-                // $_SESSION['id'] = $;
-                $_SESSION['login'] = true;
+        } else {
+          // $_SESSION['activeP']=true;
           echo '<div class="alert alert-dismissible alert-success"><strong>Alumno</strong></div>';
         }
       } else {
