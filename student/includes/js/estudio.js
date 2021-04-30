@@ -2,6 +2,9 @@ $(document).ready(function() {
     $("#gestudio").on("click", function() {
       estudio();
     });
+    $("#gestudio").click(function(){
+      location.href = "enfermedad.php";
+    });
   });
   
   function estudio() {
@@ -26,11 +29,5 @@ $(document).ready(function() {
       }
      
     });
-      // Inicia
-   $(window).ready(function(){
-    $("#gestudio").click(function(){
-      location.href = "enfermedad.php";
-    });
-  
-  });//termina
+
   }

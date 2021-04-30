@@ -35,12 +35,22 @@ incluirTemplate('header');
               
             </div>
 
-            <div class=" form-group">
+            <!-- <div class=" form-group">
               <label class="control-label">¿Cual es tu genero?</label> <br>
-              <input type="radio" name="sexo" id="sexo"  value="masculino"/>Masculino <br>
-              <input type="radio" name="sexo"  id="sexo"  value="femenino"/>Femenino <br>
+              <input type="text" name="sexo" id="sexo" class="form-control" placeholder="M/F" />
+             
               
-            </div>
+            </div> -->
+
+            <div class="form-group">
+                        <label for="control-label">¿Cual es tu genero?</label>
+                            <select class="form-control"  id="sexo" name="sexo" >
+                                <option value="M">Masculino</option>
+                                <option value="F">Femenino</option>
+                              
+                            </select>
+                            
+                        </div>
             
             
           
@@ -74,7 +84,7 @@ incluirTemplate('header');
 
           
             <!-- class="get-started-btn btn" -->
-            <div class="text-center "><button id="ghistorial" class="get-started-btn btn"  type="button">Guardar</button></div><br>
+            <div class="text-center "><button id="ghistorial"  class="get-started-btn btn"  type="button">Guardar</button></div><br>
            
           </form>
 

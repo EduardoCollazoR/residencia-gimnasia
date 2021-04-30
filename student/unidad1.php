@@ -99,7 +99,7 @@ incluirTemplate('header');
   </section><!-- End About Section 3 -->
 
   <!-- ======= About Section 4 ======= -->
-  <section id="course-details" class="course-details">
+  <!-- <section id="course-details" class="course-details">
     <div class="container" data-aos="fade-up">
       <div class="row">
         <div class="col-lg-8">
@@ -127,7 +127,7 @@ incluirTemplate('header');
       </div>
     </div>
     </div>
-  </section><!-- End About Section 4 -->
+  </section>End About Section 4 -->
 
 
 

@@ -22,7 +22,7 @@ incluirTemplate('header');
           <!--  -->
           <form action=" " onsubmit="return validar()"  role="form" class="form">
                        <!-- diabetes, hipertencion, artritis o una enfermedad en los riñones? -->
-            <div class="form-group" >
+            <!-- <div class="form-group" >
               <label class="control-label">¿Tienes alguna de las siguientes enfermedades? </label> <br>
                 <ul>
                   <li>Asma</li>
@@ -35,13 +35,29 @@ incluirTemplate('header');
                   <li>Commotio Cordis</li>
                   <li>Ninguna</li>
                 </ul>
-            </div>
-            
-            <div class=" form-group">
+            </div> -->
+            <div class="form-group">
+                        <label for="control-label">¿Tienes alguna de las siguientes enfermedades?</label>
+                            <select class="form-control"  id="enfermedad" name="enfermedad" >
+                                <option value="Asma">Asma</option>
+                                <option value="Diabetes">Diabetes</option>
+                                <option value="Hipertencion">Hipertencion</option>
+                                <option value="Artritis">Artritis</option>
+                                <option value="Miocardiopatía hipertrófica">Miocardiopatía hipertrófica</option>
+                                <option value="Síndrome de Brugada">Síndrome de Brugada</option>
+                                <option value="Síndrome del QT largo">Síndrome del QT largo</option>
+                                <option value="Commotio Cordis">Commotio Cordis</option>
+                                <option value="Ninguna">Ninguna</option>
+                                
+                              
+                            </select>
+                            
+              </div>
+            <!-- <div class=" form-group">
               <label class="control-label">¿Cual enfermedad pacedes?</label>
               <input type="text" class="form-control" name="enfermedad" id="enfermedad"   />
              
-            </div>
+            </div> -->
 
             <!-- <div id="penfer"> </div> <br> -->
 

@@ -1,3 +1,7 @@
+<?php
+ require_once 'sesiones.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <!-- ======= Head ======= -->
@@ -20,12 +24,17 @@
     <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
     <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="../assets/css/FormEstilos.css" rel="stylesheet" >
+    <link href="../assets/css/style2.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="../assets/css/styleForm.css"> -->
 
     <!-- Template Main CSS File -->
     <link href="../assets/css/style.css?v=<?php echo time(); ?>" rel="stylesheet">
     <?php $archivo = basename($_SERVER['PHP_SELF']);
     $pagina = str_replace(".php", "", $archivo);
     ?>
+
+    <!-- Form3U1 -->
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
 </head><!-- ======= End Head ======= -->
   
 <body>  
@@ -37,27 +46,27 @@
 
        <nav class="nav-menu d-none d-lg-block">
           <ul>
-            <li class="active"><a href="index.php">Inicio</a></li>
-            <li class="drop-down"><a href="unidades.php">Unidades</a>
+            <li class="active"><a href="C:/student/index.php">Inicio</a></li>
+            <li class="drop-down"><a href="/student/unidades.php">Unidades</a>
               <ul>
-                <li><a href="unidad1.php">Unidad 1</a></li>
-                <li class="drop-down"><a href="unidad2.php">Unidad 2</a>
+                <li><a href="/student/unidad1.php">Unidad 1</a></li>
+                <li class="drop-down"><a href="/student/unidad2.php">Unidad 2</a>
                  <ul>
-                   <li><a href="ejbases.php">Ejercicios Bases</a></li>
-                   <li><a href="manoslibres.php">Manos Libre o Suelo</a></li>
-                   <li><a href="barrasasimetricas.php">Barras Asimetricas</a></li>
-                   <li><a href="saltocaballo.php">Salto de Caballo / Potro</a></li>
-                   <li><a href="evalua2.php">Evaluacion</a></li>
+                   <li><a href="/student/ejbases.php">Ejercicios Bases</a></li>
+                   <li><a href="/student/manoslibres.php">Manos Libre o Suelo</a></li>
+                   <li><a href="/student/barrasasimetricas.php">Barras Asimetricas</a></li>
+                   <li><a href="/student/saltocaballo.php">Salto de Caballo / Potro</a></li>
+                   <li><a href="/student/evalua2.php">Evaluacion</a></li>
                   </ul>
                </li>
-                <li><a href="unidad3.php">Unidad 3</a></li>
+                <li><a href="/student/unidad3.php">Unidad 3</a></li>
                 <li><a href="#">Unidad 4</a></li>
                 <li><a href="#">Unidad 5</a></li>
              </ul>
            </li>
-            <li class="drop-down"><a href="unidades.php">Nombre de la persona</a>
+            <li class="drop-down"><a href="#"><?=$_SESSION['nombre'];?>  </a>
              <ul>
-               <li><a href="#">Perfil</a></li>
+               <li><a href="perfil.php">Perfil</a></li>
                <!-- <li><a href="">Cerrar Sesion</a></li> -->
              </ul>
             </li>

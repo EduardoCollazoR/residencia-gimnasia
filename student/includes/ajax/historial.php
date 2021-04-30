@@ -15,7 +15,7 @@
  // recuperamos las variables
  $estatura=filter_var($_POST['estatura'], FILTER_SANITIZE_STRING);
  $peso=filter_var($_POST['peso'], FILTER_SANITIZE_NUMBER_INT);
- $sexo=filter_var($_POST['sexo'], FILTER_SANITIZE_NUMBER_INT);
+ $sexo=filter_var($_POST['sexo'], FILTER_SANITIZE_STRING);
  $ncirugia=filter_var($_POST['ncirugia'], FILTER_SANITIZE_STRING);
 //  $enfermedad=$_POST['enfermedad'];
 //  $estatura=$_POST['estatura'];

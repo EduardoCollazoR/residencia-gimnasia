@@ -51,22 +51,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 }
 ?>
+<?php
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Unidad 2</title>
-</head>
-<body>
-	<link href="../assets/css/style2.css" rel="stylesheet">
-
-<!-- ======= Header ======= -->
-  <?php include 'navbar.php';?>
-<!-- End Header -->
-
-<!-- ======= Login ======= -->
-  <?php include 'login.php';?>
-<!-- End Login -->
+require 'includes/funciones.php';
+incluirTemplate('header', $inicio = true, $login = true);
+?>
 
 	<main id="main">
 		<!-- ======= Breadcrumbs ======= -->
@@ -743,8 +732,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	</main>
 
 <!-- Footer -->
-  <?php include 'footer.php';?>
+<?php
+incluirTemplate('footer');
+?>
 <!-- End Footer -->
 
-</body>
-</html>

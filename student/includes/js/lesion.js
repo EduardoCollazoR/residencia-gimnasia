@@ -1,47 +1,4 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     eventListener();
-    
-//   });
- 
 
-//   function eventListener() {
-//     const metodoContacto = document.querySelectorAll(
-//         'input[name="lesion"]'
-//       );
-//     metodoContacto.forEach((input) =>
-//       input.addEventListener("click", mostrarMetodos)
-//     );
-//   }
-
-// function mostrarMetodos(e) {
-//     const contactoDiv = document.querySelector("#plesion");
-  
-//     if (e.target.value === "Si") {
-//       contactoDiv.innerHTML = 
-//       `
-//       <div class=" form-group">
-//          <label class="control-label">¿Que lesion tuviste?</label>
-//          <input type="text" class="form-control" name="nombre-lesion"   /> <br>
-//       </div>
-
-//       <div class=" form-group">
-//          <label class="control-label">¿Cual es la fecha que tuviste tu lesion?</label>
-//          <input type="date" class="form-control" name="fechalesion" id="fechalesion" /> <br>
-//       </div>
-
-//       <div class=" prehabilitacion">
-//       <label class="control-label">¿Cuanto tiempo duro tu rehabilitacion?</label>
-//       <input type="text" class="form-control" name="tiempoRehabilitacion" id="tiempoRehabilitacion" placeholder="1 mes" /> <br>
-      
-//     </div>
-
-
-//       `
-//       ;
-//     } else {
-//         contactoDiv.style.display='none';
-//       }
-//   }
 function mostrar(num) {
   if(num==0) {
     document.getElementById('f1').style.display = '';
@@ -55,11 +12,14 @@ function mostrar(num) {
 
   $(document).ready(function() {
     $("#glesion").on("click", function() {
-      estudio();
+      lesion();
+    });
+    $("#glesion").click(function(){
+      location.href = "estudio.php";
     });
   });
   
-  function estudio() {
+  function lesion() {
     // if($("#nlesion"))
     // {
     // var nlesion = $("#nlesion").val();
@@ -114,10 +74,5 @@ function mostrar(num) {
      
     });
       // Inicia
-   $(window).ready(function(){
-    $("#ghistorial").click(function(){
-      location.href = "index.php";
-    });
-  
-  });//termina
+ 
   }

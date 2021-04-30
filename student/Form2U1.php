@@ -1,24 +1,11 @@
-<!DOCTYPE html>
-<html>
+<?php
 
-<head>
-    <title>Cursos</title>
-    <link rel="stylesheet" href="FormEstilos.css">
-</head>
-
-<body>
-    <script src="jquery.js"></script>
-    <script src="jquery.knob.js"></script>
-
-    <!-- ======= Header ======= -->
-    <?php include 'navbar.php'; ?>
-    <!-- End Header -->
-
-    <!-- ======= Login ======= -->
-    <?php include 'login.php'; ?>
-    <!-- End Login -->
-
-
+require 'includes/funciones.php';
+incluirTemplate('header', $inicio = true, $login = true);
+?>
+ 
+ <script src="../assets/vendor/jquery/jquery.min.js"></script>
+<script src="../assets/vendor/jquery.knob.js"></script>
     <main id="main" data-aos="fade-in">
 
         <!-- ======= Breadcrumbs ======= -->
@@ -188,13 +175,12 @@
         }
     </script>
 
-
+<script src="../assets/vendor/jquery/jquery.min.js"></script>
+<script src="../assets/vendor/jquery.knob.js"></script>
 
     <!-- Footer -->
-    <?php include 'footer.php'; ?>
+    <?php
+incluirTemplate('footer');
+?>
     <!-- End Footer -->
-    <script src="jquery.js"></script>
-    <script src="jquery.knob.js"></script>
-</body>
 
-</html>

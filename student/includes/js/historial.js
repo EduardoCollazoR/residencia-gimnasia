@@ -1,30 +1,4 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     eventListener();
-    
-//   });
- 
 
-//   function eventListener() {
-//     const metodoContacto = document.querySelectorAll(
-//         'input[name="cirugia"]'
-//       );
-//     metodoContacto.forEach((input) =>
-//       input.addEventListener("click", mostrarMetodos)
-//     );
-//   }
-
-// function mostrarMetodos(e) {
-//     const contactoDiv = document.querySelector("#pcirugia");
-  
-//     if (e.target.value === "Si") {
-//       contactoDiv.innerHTML = 
-//       `<label class="control-label">¿Que cirugia tuviste?</label>
-//       <input type="text" class="form-control" name="ncirugia"   /> <br> `
-//       ;
-//     } else {
-//         contactoDiv.style.display='none';
-//       }
-//   }
 function mostrar(num) {
   if(num==0) {
     document.getElementById('f1').style.display = '';
@@ -38,11 +12,14 @@ function mostrar(num) {
 
   $(document).ready(function() {
     $("#ghistorial").on("click", function() {
-      estudio();
+      historial();
+    });
+    $("#ghistorial").click(function(){
+      location.href = "lesion.php";
     });
   });
   
-  function estudio() {
+  function historial() {
     var estatura = $("#estatura").val();
     var peso = $("#peso").val();
     if($("#sexo"))
@@ -76,14 +53,15 @@ function mostrar(num) {
           $('#ncirugia').val("");
         
         }
+         // Inicia
+  //  $(window).ready(function(){
+   
+  
+  // });//termina
       }
      
     });
-      // Inicia
-   $(window).ready(function(){
-    $("#ghistorial").click(function(){
-      location.href = "lesion.php";
-    });
-  
-  });//termina
+    //   $("#ghistorial").click(function(){
+    //   location.href = "lesion.php";
+    // });
   }

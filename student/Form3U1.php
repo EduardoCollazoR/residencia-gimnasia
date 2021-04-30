@@ -1,41 +1,58 @@
-<?php
-session_start();  
+<!-- <?php 
+// session_start();  
 // Include config file
-require_once "config.php";
+// require_once "config.php";
 
 // comprobar si tenemos los parametros w1 y w2 en la URL
-if (isset($_GET["w1"]) && isset($_GET["w2"])) {
-   // asignar w1 y w2 a dos variables
-   $userScore = $_GET["w1"];
-   $status = $_GET["w2"];
+// if (isset($_GET["w1"]) && isset($_GET["w2"])) {
+//    asignar w1 y w2 a dos variables
+//    $userScore = $_GET["w1"];
+//    $status = $_GET["w2"];
 
 
 
-    $query = " insert into evaluacion_usuario values (4,".$_SESSION['id_usuario'].",".$_SESSION['Id_Entrenador'].", $userScore, 'Test',$status) ";
-      // mostrar $phpVar1 y $phpVar2
-     // echo "<p>Parameters: " . $query.   "</p>";
+    // $query = " insert into evaluacion_usuario values (4,".$_SESSION['id_usuario'].",".$_SESSION['Id_Entrenador'].", $userScore, 'Test',$status) ";
+//       // mostrar $phpVar1 y $phpVar2
+    //  echo "<p>Parameters: " . $query.   "</p>";
 
-    mysqli_query($link, $query);  
-    mysqli_close($link);
+//     mysqli_query($link, $query);  
+//     mysqli_close($link);
 
-} else {
-    echo "<p>No parameters</p>";
- }
+// } else {
+//     echo "<p>No parameters</p>";
+//  }
 
+?>-->
+<?php
+
+require 'includes/funciones.php';
+incluirTemplate('header', $inicio = true, $login = true);
 ?>
-<!DOCTYPE html>
-<!-- Created By CodingNepal - www.codingnepalweb.com -->
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <title>Awesome Quiz App | CodingNepal</title> -->
-    <link rel="stylesheet" href="styleForm.css">
-    <!-- FontAweome CDN Link for Icons -->
+    <link rel="stylesheet" href="../assets/css/styleForm.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
-<body>
+
+<main id="main" data-aos="fade-in">
+ <section>
+
+     <!-- ======= Breadcrumbs ======= -->
+     <div class="breadcrumbs">
+            <div class="container">
+                <h2>Test Unidad 3</h2>
+            </div>
+        </div><!-- End Breadcrumbs -->
+        <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
     <!-- start Quiz button -->
     <div class="start_btn"><button>Empezar prueba</button></div>
 
@@ -99,16 +116,21 @@ if (isset($_GET["w1"]) && isset($_GET["w2"])) {
         </div>
     </div>
 
-   <script src="js/Form1questions.js"></script>
+   <script src="../assets/js/Form1questions.js"></script>
     <!-- Inside this JavaScript file I've coded all Quiz Codes -->
-     <script src="js/script.js">
+     <script src="../assets/js/script.js">
     
      
      </script> 
+  </section>
+</main>
 
-</body>
-</html>
+<?php
+incluirTemplate('footer');
+?>
 
+<script src="../assets/vendor/jquery/jquery.min.js"></script>
+<script src="../assets/vendor/jquery.knob.js"></script>
  
 <script>  
 btnw.onclick = ()=>{

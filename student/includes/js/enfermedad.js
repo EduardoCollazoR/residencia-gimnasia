@@ -3,6 +3,9 @@ $(document).ready(function() {
     enfermedad();
     // 
   });
+  $("#genfermedad").click(function(){
+		location.href = "#";
+	});
 });
 
 function enfermedad() {
@@ -31,12 +34,6 @@ function enfermedad() {
   
   });
   // $(location).attr('href','historial.php');  
-  // Inicia
-   $(window).ready(function(){
-	$("#genfermedad").click(function(){
-		location.href = "historial.php";
-	});
 
-});//termina
 }
 

@@ -71,7 +71,7 @@ incluirTemplate('header');
 
           
             <!-- class="get-started-btn btn" -->
-             <div class="text-center "><button id="glesion" class="get-started-btn btn"  type="button">Guardar</button></div><br>
+             <div class="text-center "><button id="glesion" name="glesion" class="get-started-btn btn"  type="button">Guardar</button></div><br>
 
           </form>
 

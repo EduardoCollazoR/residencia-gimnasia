@@ -35,7 +35,7 @@
         <button class="close"  type="button" data-dismiss="alert"  >×</button><strong>Registro con exito.</strong><a class="alert-link"  ></a>
       </div>';
     
-      // header('Location:../../enfermedad.php');
+      
             } else {
                 echo '<div class="alert alert-dismissible alert-danger">
                 <button class="close" type="button" data-dismiss="alert">×</button><strong>Error al realizar el registro.</strong><a class="alert-link" ></a>

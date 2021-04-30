@@ -36,6 +36,6 @@
                 <button class="close" type="button" data-dismiss="alert">×</button><strong>Error al realizar el registro.</strong><a class="alert-link" ></a>
               </div>';
             }
-
+?>
        
   
