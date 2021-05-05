@@ -20,8 +20,9 @@
 					<h4>Enlaces Utiles</h4>
 					<ul>
 						<li><i class="bx bx-chevron-right"></i> <a href="index.php">Inicio</a></li>
-						<li><i class="bx bx-chevron-right"></i> <a href="unidades.php">Unidades</a></li>
-						<li><i class="bx bx-chevron-right"></i> <a href="#">Perfil</a></li>
+						<li><i class="bx bx-chevron-right"></i> <a href="alumnos.php">Alumnos</a></li>
+						<li><i class="bx bx-chevron-right"></i> <a href="#">Calendario</a></li>
+						<li><i class="bx bx-chevron-right"></i> <a href="perfil.php">Perfil</a></li>
 					
 					</ul>
 				</div>
@@ -68,9 +69,8 @@
 <!-- Template  JS File opcion-->
 
 
-<script src="includes/js/estudio.js"></script>
+<!-- <script src="includes/js/estudio.js"></script>
 <script src="includes/js/enfermedad.js"></script>
 <script src="includes/js/historial.js"></script>
 <script src="includes/js/lesion.js"></script>
-<script src="includes/js/tutor.js"></script>
-
+<script src="includes/js/tutor.js"></script> -->

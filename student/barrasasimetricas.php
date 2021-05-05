@@ -36,7 +36,7 @@ incluirTemplate('header');
 
 								<div class="carousel-item active">
 									<div class="col-lg-6 order-1 order-lg-2 content" data-aos="fade-left" data-aos-delay="100">
-										<img src="assets/img/barras3.png" alt="..." style="width: 700px; margin-left: 250px;">
+										<img src="../assets/img/barras3.png" alt="..." style="width: 700px; margin-left: 250px;">
 									</div>
 
 									<div class="col-lg order-1 order-lg-2 content" data-aos="fade-left" data-aos-delay="100">

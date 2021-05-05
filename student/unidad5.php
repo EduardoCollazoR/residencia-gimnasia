@@ -8,7 +8,7 @@ incluirTemplate('header');
   <!-- ======= Breadcrumbs ======= -->
   <div class="breadcrumbs" data-aos="fade-in">
     <div class="container">
-      <h2>UNIDAD 3 - Nivel Intermedio</h2>
+      <h2>UNIDAD 5 - Nivel Avanzado</h2>
       <p> En esta unidad se evaluara a la gimnasta de acuerdo al contenido aprendido en las lecciones pasadas. Tiene como objetivo poder observar a distancia, por medio de video como la gimnasta realiza las actividades que el entrenador (a) le proporcionara.</p>
       <h3 style="color: #B22222;"> <b> REALIZAR LAS ACTIVIDADES UNICAMENTE BAJO LA SUPERVISION DE UN ADULTO </b> </h3>
     </div>
@@ -20,7 +20,7 @@ incluirTemplate('header');
 
       <div class="section-title">
         <h2>Gimnasia Artistica Femenina</h2>
-        <p>Evaluacion Unidad 3:</p>
+        <p>Evaluacion Unidad 5:</p>
       </div>
 
       <div class="row">
@@ -34,7 +34,7 @@ incluirTemplate('header');
           </p>
 
           <ul>
-            <li><i class="icofont-check-circled"></i> Ejercicios Bases.</li>
+            <li><i class="icofont-check-circled"></i> Barras Asimetricas</li>
             
           </ul>
         </div>

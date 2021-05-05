@@ -25,9 +25,9 @@ if (!empty($_POST)) {
       if (password_verify($password, $result['Clave'])) {
 
         if ($result['descripcion'] == "Entrenador") {
-        //   $_SESSION['id']=$result['IdUsuario'];
-        //  $_SESSION['nombre']=$result['Nombre'];
-        //   $_SESSION['active']=true;
+          $_SESSION['id']=$result['IdUsuario'];
+         $_SESSION['nombre']=$result['Nombre'];
+          $_SESSION['active']=true;
           echo '<div class="alert alert-dismissible alert-success"><strong>Entrenador</strong></div>';
         } else {
           $_SESSION['id']=$result['IdUsuario'];

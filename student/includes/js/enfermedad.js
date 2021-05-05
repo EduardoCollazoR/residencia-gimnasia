@@ -4,7 +4,7 @@ $(document).ready(function() {
     // 
   });
   $("#genfermedad").click(function(){
-		location.href = "#";
+		location.href = "tutor.php";
 	});
 });
 

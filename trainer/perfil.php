@@ -2,11 +2,11 @@
 require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\includes\config\database.php';
 require 'includes/funciones.php';
 incluirTemplate('header');
-// require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\student\includes\templates\sesiones.php';
+require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\trainer\includes\templates\sesiones.php';
 
 
 $idUsuario=$_SESSION['id'];
-$sql= 'SELECT  concat(usuario.Nombre," ",usuario.ApellidoP," ",usuario.ApellidoM) as nombrealumno, usuario.*
+$sql= 'SELECT  concat(usuario.Nombre," ",usuario.ApellidoP," ",usuario.ApellidoM) as nombremaestro, usuario.*
 FROM usuario WHERE IdUsuario=?';
 $query= $pdo->prepare($sql);
 $query->execute(array($idUsuario));
@@ -14,10 +14,11 @@ $query->execute(array($idUsuario));
 $consulta = $query->fetchAll(PDO::FETCH_ASSOC);
 
 for($i = 0; $i < count($consulta); $i++){
-    $nombre_alumno = $consulta[$i]['nombrealumno'];
+    $nombre_maestro = $consulta[$i]['nombremaestro'];
     $fecha = $consulta[$i]['FechaNacimiento'];
     $email = $consulta[$i]['Email'];
     $ciudad = $consulta[$i]['Ciudad'];
+    $asociacion = $consulta[$i]['Asociacion'];
     $direccion = $consulta[$i]['Direccion'];
 }
 
@@ -41,7 +42,7 @@ echo'<main id="main" data-aos="fade-in">
         <!--  -->
        <div class="form-group">
       
-    <label for="control-label" >Nombre: '.$nombre_alumno.' <a></a> </label>
+    <label for="control-label" >Nombre: '.$nombre_maestro.' <a></a> </label>
   
   </div>
   <div class="form-group">
@@ -59,6 +60,10 @@ echo'<main id="main" data-aos="fade-in">
     <label for="control-label" >Ciudad: '.$ciudad.' <a ></a> </label>
   
   </div>
+  <div class="form-group">
+     
+  <label for="control-label" >Asociacion: '.$asociacion.'<a ></a> </label>
+</div>
   <div class="form-group">
      
     <label for="control-label" >Direccion: '.$direccion.'<a ></a> </label>

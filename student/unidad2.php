@@ -22,7 +22,7 @@ incluirTemplate('header');
         <div class="col-md-6 d-flex align-items-stretch">
           <div class="card">
             <div class="card-img">
-              <img src="assets/img/pushup.gif" alt="..." style="width: 700px; height: 305px;">
+              <img src="../assets/img/pushup.gif" alt="..." style="width: 700px; height: 305px;">
             </div>
             <div class="card-body">
               <h5 class="card-title"><a href="ejbases.php">Ejercicios Bases</a></h5>
@@ -35,7 +35,7 @@ incluirTemplate('header');
         <div class="col-md-6 d-flex align-items-stretch">
           <div class="card">
             <div class="card-img">
-              <img src="assets/img/manos-libres.jpg" alt="..." style="width: 700px; height: 305px;">
+              <img src="../assets/img/manos-libres.jpg" alt="..." style="width: 700px; height: 305px;">
             </div>
             <div class="card-body">
               <h5 class="card-title"><a href="manoslibres.php">Manos Libres o Suelo</a></h5>
@@ -58,7 +58,7 @@ incluirTemplate('header');
         <div class="col-md-6 d-flex align-items-stretch">
           <div class="card">
             <div class="card-img">
-              <img src="assets/img/barras2.jpg" alt="..." style="width: 700px; height: 305px;">
+              <img src="../assets/img/barras2.jpg" alt="..." style="width: 700px; height: 305px;">
             </div>
             <div class="card-body">
               <h5 class="card-title"><a href="barrasasimetricas.php">Barras Asimetricas</a></h5>
@@ -72,7 +72,7 @@ incluirTemplate('header');
         <div class="col-md-6 d-flex align-items-stretch">
           <div class="card">
             <div class="card-img">
-              <img src="assets/img/salto.gif" alt="...">
+              <img src="../assets/img/salto.gif" alt="...">
             </div>
             <div class="card-body">
               <h5 class="card-title"><a href="saltocaballo.php">Salto de Caballo/Potro</a></h5>

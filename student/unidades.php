@@ -21,7 +21,7 @@ incluirTemplate('header');
         <div class="col-md-6 d-flex align-items-stretch">
           <div class="card">
             <div class="card-img">
-              <img src="assets/img/events-1.jpg" alt="...">
+              <img src="../assets/img/uni1.jpg" alt="...">
             </div>
             <div class="card-body">
               <h5 class="card-title"><a href="unidad1.php">UNIDAD 1</a></h5>
@@ -33,7 +33,7 @@ incluirTemplate('header');
         <div class="col-md-6 d-flex align-items-stretch">
           <div class="card">
             <div class="card-img">
-              <img src="assets/img/events-2.jpg" alt="...">
+              <img src="../assets/img/uni2.jpg" alt="...">
             </div>
             <div class="card-body">
               <h5 class="card-title"><a href="unidad2.php">UNIDAD 2</a></h5>
@@ -56,24 +56,24 @@ incluirTemplate('header');
         <div class="col-md-6 d-flex align-items-stretch">
           <div class="card">
             <div class="card-img">
-              <img src="assets/img/events-1.jpg" alt="...">
+              <img src="../assets/img/uni3.jpg" alt="...">
             </div>
             <div class="card-body">
               <h5 class="card-title"><a href="unidad3.php">UNIDAD 3</a></h5>
-              <p class="font-italic text-center">Nivel Avanzado</p>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+              <p class="font-italic text-center">Nivel Intermedio</p>
+              <p class="card-text">En esta unidad se evaluara a la gimnasta de acuerdo al contenido aprendido en las lecciones pasadas. Tiene como objetivo poder observar a distancia, por medio de video como la gimnasta realiza las actividades que el entrenador (a) le proporcionara.</p>
             </div>
           </div>
         </div>
         <div class="col-md-6 d-flex align-items-stretch">
           <div class="card">
             <div class="card-img">
-              <img src="assets/img/events-2.jpg" alt="...">
+              <img src="../assets/img/uni4.jpg" alt="...">
             </div>
             <div class="card-body">
-              <h5 class="card-title"><a href="#">UNIDAD 4</a></h5>
-              <p class="font-italic text-center">Nivel Avanzado</p>
-              <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+              <h5 class="card-title"><a href="unidad4.php">UNIDAD 4</a></h5>
+              <p class="font-italic text-center">Nivel Intermedio</p>
+              <p class="card-text">En esta unidad se evaluara a la gimnasta de acuerdo al contenido aprendido en las lecciones pasadas. Tiene como objetivo poder observar a distancia, por medio de video como la gimnasta realiza las actividades que el entrenador (a) le proporcionara.</p>
             </div>
           </div>
 
@@ -90,12 +90,12 @@ incluirTemplate('header');
         <div class="col-md-6 d-flex align-items-stretch">
           <div class="card">
             <div class="card-img">
-              <img src="assets/img/events-1.jpg" alt="...">
+              <img src="../assets/img/uni5.jpg" alt="...">
             </div>
             <div class="card-body">
-              <h5 class="card-title"><a href="unidad3.php">UNIDAD 5</a></h5>
+              <h5 class="card-title"><a href="unidad5.php">UNIDAD 5</a></h5>
               <p class="font-italic text-center">Nivel Avanzado</p>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+              <p class="card-text">En esta unidad se evaluara a la gimnasta de acuerdo al contenido aprendido en las lecciones pasadas. Tiene como objetivo poder observar a distancia, por medio de video como la gimnasta realiza las actividades que el entrenador (a) le proporcionara.</p>
             </div>
           </div>
         </div>

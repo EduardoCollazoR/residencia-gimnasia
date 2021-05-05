@@ -42,7 +42,7 @@ incluirTemplate('header');
 
 
 									<div class="col-lg pt-4 pt-lg-0 order-2 order-lg-1 content">
-										<img src="assets/img/potro1.gif" style="align-content: center;">
+										<img src="../assets/img/potro1.gif" style="align-content: center;">
 										<h3> 1. Introduccion de Ejecucion </h3>
 										<p>
 											El salto de caballo es un disciplina de gimnasia realizada por hombres y mujeres. En la ilustración tu puedes ver cómo preparar la mesa de salto, el trampolín y las colchonetas.
@@ -67,7 +67,7 @@ incluirTemplate('header');
 
 								<div class="carousel-item">
 									<div class="col-lg pt-4 pt-lg-0 order-2 order-lg-1 content">
-										<img src="assets/img/potro2.gif" style="align-content: center;">
+										<img src="../assets/img/potro2.gif" style="align-content: center;">
 
 										<h3> Salto de gimnasia - Ejercicio 01 </h3>
 										<p>
@@ -96,7 +96,7 @@ incluirTemplate('header');
 								<!-- ================== Slide 3 ================== -->
 								<div class="carousel-item">
 									<div class="col-lg pt-4 pt-lg-0 order-2 order-lg-1 content">
-										<img src="assets/img/potro2.gif" style="align-content: center;">
+										<img src="../assets/img/potro2.gif" style="align-content: center;">
 
 										<h3> Salto de gimnasia - Ejercicio 02 </h3>
 										<p>
@@ -126,7 +126,7 @@ incluirTemplate('header');
 
 								<div class="carousel-item">
 									<div class="col-lg pt-4 pt-lg-0 order-2 order-lg-1 content">
-										<img src="assets/img/potro3.gif" style="align-content: center;">
+										<img src="../assets/img/potro3.gif" style="align-content: center;">
 
 										<h3> Salto de gimnasia - Ejercicio 03 </h3>
 										<p>
@@ -156,7 +156,7 @@ incluirTemplate('header');
 								<!-- ================== Slide 5 ================== -->
 								<div class="carousel-item">
 									<div class="col-lg pt-4 pt-lg-0 order-2 order-lg-1 content">
-										<img src="assets/img/potro.gif" style="align-content: center;">
+										<img src="../assets/img/potro.gif" style="align-content: center;">
 
 										<h3> Salto de Potro - Ejercicio 04 </h3>
 										<p>
@@ -188,7 +188,7 @@ incluirTemplate('header');
 								<!-- ================== Slide 6 ================== -->
 								<div class="carousel-item">
 									<div class="col-lg pt-4 pt-lg-0 order-2 order-lg-1 content">
-										<img src="assets/img/potro4.gif" style="align-content: center;">
+										<img src="../assets/img/potro4.gif" style="align-content: center;">
 
 										<h3> Flik Adelante sobre el Potro - Gimnasia Artística </h3>
 										<p>
@@ -216,7 +216,7 @@ incluirTemplate('header');
 								<!-- ================== Slide 7 ================== -->
 								<div class="carousel-item">
 									<div class="col-lg pt-4 pt-lg-0 order-2 order-lg-1 content">
-										<img src="assets/img/flisk.gif" style="align-content: center;">
+										<img src="../assets/img/flisk.gif" style="align-content: center;">
 
 										<h3> Gimnasia Artística - Flik Flak Adelante </h3>
 										<p>

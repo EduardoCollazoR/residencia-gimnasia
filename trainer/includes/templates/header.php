@@ -46,8 +46,10 @@
 
        <nav class="nav-menu d-none d-lg-block">
           <ul>
-            <li class="active"><a href="/student/index.php">Inicio</a></li>
-            <li class="drop-down"><a href="/student/unidades.php">Unidades</a>
+            <li class="active"><a href="/trainer/index.php">Inicio</a></li>
+            <li ><a href="/trainer/alumnos.php">Alumnos</a></li>
+            <li ><a href="/trainer/index.php">Calendario</a></li>
+            <!-- <li class="drop-down"><a href="/trainer/unidades.php">Unidades</a>
               <ul>
                 <li><a href="/student/unidad1.php">Unidad 1</a></li>
                 <li class="drop-down"><a href="/student/unidad2.php">Unidad 2</a>
@@ -63,8 +65,8 @@
                 <li><a href="/student/unidad4.php">Unidad 4</a></li>
                 <li><a href="/student/unidad5.php">Unidad 5</a></li>
              </ul>
-           </li>
-          
+           </li> -->
+          <!-- nombre del profesor -->
             <li class="drop-down"><a href="perfil.php"> <?=$_SESSION['nombre'];?>  </a>
              <ul>
                <li><a href="perfil.php">Perfil</a></li>
