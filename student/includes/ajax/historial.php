@@ -1,4 +1,6 @@
 <?php
+    // mandar llamar session_start();
+    require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\student\includes\templates\sesiones.php';
      // contectamos con la base de datos   
         require 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\includes\config\database.php';
 
@@ -17,20 +19,12 @@
  $peso=filter_var($_POST['peso'], FILTER_SANITIZE_NUMBER_INT);
  $sexo=filter_var($_POST['sexo'], FILTER_SANITIZE_STRING);
  $ncirugia=filter_var($_POST['ncirugia'], FILTER_SANITIZE_STRING);
-//  $enfermedad=$_POST['enfermedad'];
-//  $estatura=$_POST['estatura'];
-//  $peso=$_POST['peso'];
-//  $sexo=$_POST['sexo'];
-//  $cirugia=$_POST['cirugia'];
-//  $lesion=$_POST['lesion'];
-//  $fechalesion=$_POST['fechalesion'];
-//  $rehabilitacion=$_POST['rehabilitacion'];
-//  $tiemporehabili=$_POST['tiemporehabili'];
+ $IdUsuario=$_SESSION['id'];
 
  //hacemos la sentencia de sql
- $sqlInsert = "INSERT INTO historialme (Estatura, Peso, Sexo, Cirugias) VALUES(?,?,?,?)";
+ $sqlInsert = "INSERT INTO historialme (Estatura, Peso, Sexo, Cirugias, IdUsuario) VALUES(?,?,?,?,?)";
             $queryInsert = $pdo->prepare($sqlInsert);
-            $resultInsert = $queryInsert->execute(array($estatura,$peso,$sexo,$ncirugia));
+            $resultInsert = $queryInsert->execute(array($estatura,$peso,$sexo,$ncirugia,$IdUsuario));
 
 
             if ($resultInsert) {

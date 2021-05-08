@@ -3,6 +3,7 @@
 require 'includes/funciones.php';
 incluirTemplate('header');
 ?>
+  <link href="css/tablas.css" rel="stylesheet">
 <main id="main" data-aos="fade-in">
 
   <!-- ======= Breadcrumbs ======= -->
@@ -12,44 +13,23 @@ incluirTemplate('header');
     </div>
   </div><!-- End Breadcrumbs -->
 
-  <!-- ======= Contact Section ======= -->
-  <!-- <section id="contact" class="contact">
-
-        <div class="container" data-aos="fade-up">
-
-            <div class="center-form">
-                <div class="col-lg-4 mt-lg-0 ">
-          
-         
-
-                 </div>
-
-            </div>
-
-        </div>
-
-
-    </section>End Contact Section -->
-        
-    </div>
+    <!-- Tabla Alumnos -->
     <div class="row">
         <div class="col-md-12">
             <div class="tile">
                 <div class="tile-body">
                     <div class="table-responsive">
-                        <table class="table table-hover table-bordered" id="tableResidencia2">
+                        <table class="table table-hover table-bordered" id="tableAlumnos">
                             <thead>
                                 <tr>
                                     <th>Acciones</th>
-                                    <th>Nombre Proyecto</th>
-                                    <th>Tipo</th>
-                                    <th>Periodo</th>
-                                    <th>Fecha Inicio</th>
-                                    <th>Fecha Terminacion</th>
-                                    <th>Numero de control</th>
-                                    <th>Alumno</th>
-                                    <th>Apellido</th>
-                                    <th>Estado</th>
+                                    <th>Nombre</th>
+                                    <th>Apellido Paterno</th>
+                                    <th>Apellido Materno</th>
+                                    <th>Fecha Nacimiento</th>
+                                    <th>Email</th>
+                                    <th>Ciudad</th>
+                                    <th>Direccion</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -60,10 +40,7 @@ incluirTemplate('header');
 
             </div>
         </div>
-    </div>
-
-
-
+    </div><!-- End tabla alumnos -->
 
 </main><!-- End #main -->
 <?php

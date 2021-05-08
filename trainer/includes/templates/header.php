@@ -1,11 +1,12 @@
 <?php
- require_once 'sesiones.php';
+//  require_once 'sesiones.php';
 ?>
 
 <!DOCTYPE html>
 <html>
 <!-- ======= Head ======= -->
 <head>
+<!-- <meta charset="utf-8"> -->
     <title>GIMNASIA ARTISTICA</title>
     <!-- Favicons -->
     <link href="../assets/img/favicon.png" rel="icon">
@@ -25,6 +26,7 @@
     <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="../assets/css/FormEstilos.css" rel="stylesheet" >
     <link href="../assets/css/style2.css" rel="stylesheet">
+    <link href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="../assets/css/styleForm.css"> -->
 
     <!-- Template Main CSS File -->
@@ -66,8 +68,8 @@
                 <li><a href="/student/unidad5.php">Unidad 5</a></li>
              </ul>
            </li> -->
-          <!-- nombre del profesor -->
-            <li class="drop-down"><a href="perfil.php"> <?=$_SESSION['nombre'];?>  </a>
+          <!--  =$_SESSION[//'nombre'];?>-->
+            <li class="drop-down"><a href="perfil.php"> nombre del profesor  </a>
              <ul>
                <li><a href="perfil.php">Perfil</a></li>
                <!-- <li><a href="">Cerrar Sesion</a></li> -->

@@ -1,28 +1,32 @@
 <?php
+require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\student\includes\templates\sesiones.php';
      // contectamos con la base de datos   
         require 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\includes\config\database.php';
 
  
      // recuperamos las variables
+     $idUsuario=$_SESSION['id'];
+$sql= 'SELECT IdHistorialM FROM historialme WHERE IdUsuario =?';
+$query= $pdo->prepare($sql);
+$query->execute(array($idUsuario));
+
+$consulta = $query->fetchAll(PDO::FETCH_ASSOC);
+
+for($i = 0; $i < count($consulta); $i++){
+    $idhistorial = $consulta[$i]['IdHistorialM'];
+
+}
  // recuperamos las variables
  $nlesion=filter_var($_POST['nlesion'], FILTER_SANITIZE_STRING);
  $fechalesion=filter_var($_POST['fechalesion'], FILTER_SANITIZE_STRING);
  $rehabilitacion=filter_var($_POST['rehabilitacion'], FILTER_SANITIZE_STRING);
  $tiempoRehabilitacion=filter_var($_POST['tiempoRehabilitacion'], FILTER_SANITIZE_STRING);
-//  $enfermedad=$_POST['enfermedad'];
-//  $estatura=$_POST['estatura'];
-//  $peso=$_POST['peso'];
-//  $sexo=$_POST['sexo'];
-//  $cirugia=$_POST['cirugia'];
-//  $lesion=$_POST['lesion'];
-//  $fechalesion=$_POST['fechalesion'];
-//  $rehabilitacion=$_POST['rehabilitacion'];
-//  $tiemporehabili=$_POST['tiemporehabili'];
+
 
  //hacemos la sentencia de sql
- $sqlInsert = "INSERT INTO lesion (Nombre, FechaLesion, Rehabilitacion, TiempoRehabili) VALUES(?,?,?,?)";
+ $sqlInsert = "INSERT INTO lesion (Nombre, FechaLesion, Rehabilitacion, TiempoRehabili, IdHistorialM) VALUES(?,?,?,?,?)";
             $queryInsert = $pdo->prepare($sqlInsert);
-            $resultInsert = $queryInsert->execute(array($nlesion,$fechalesion,$rehabilitacion,$tiempoRehabilitacion));
+            $resultInsert = $queryInsert->execute(array($nlesion,$fechalesion,$rehabilitacion,$tiempoRehabilitacion,$idhistorial));
 
 
             if ($resultInsert) {

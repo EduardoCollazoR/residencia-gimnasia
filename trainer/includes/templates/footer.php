@@ -74,3 +74,8 @@
 <script src="includes/js/historial.js"></script>
 <script src="includes/js/lesion.js"></script>
 <script src="includes/js/tutor.js"></script> -->
+<script src="js/funcionalumnos.js"></script>
+<!-- Data table plugin-->
+<script type="text/javascript" src="//cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+<script type="text/javascript" src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>

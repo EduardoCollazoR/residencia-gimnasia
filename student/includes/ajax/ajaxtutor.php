@@ -1,4 +1,5 @@
 <?php
+require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\student\includes\templates\sesiones.php'; 
      // contectamos con la base de datos   
         require 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\includes\config\database.php';
 
@@ -12,6 +13,7 @@
     </div>';
         } else {
      // recuperamos las variables
+
  // recuperamos las variables
  $nombret=filter_var($_POST['nombret'], FILTER_SANITIZE_STRING);
  $apellidopt=filter_var($_POST['apellidopt'], FILTER_SANITIZE_STRING);
@@ -20,12 +22,12 @@
  $emailt=filter_var($_POST['emailt'], FILTER_SANITIZE_EMAIL);
  $telefonot=filter_var($_POST['telefonot'], FILTER_SANITIZE_NUMBER_INT);
  $parentesco=filter_var($_POST['parentesco'], FILTER_SANITIZE_STRING);
-
+ $IdUsuario=$_SESSION['id'];
 
  //hacemos la sentencia de sql
- $sqlInsert = "INSERT INTO tutor (Nombre, ApelidoP, ApellidoM, FechaNacimiento, Email, Telefono, Parentesco) VALUES(?,?,?,?,?,?,?)";
+ $sqlInsert = "INSERT INTO tutor (Nombre, ApelidoP, ApellidoM, FechaNacimiento, Email, Telefono, Parentesco, IdUsuario) VALUES(?,?,?,?,?,?,?,?)";
             $queryInsert = $pdo->prepare($sqlInsert);
-            $resultInsert = $queryInsert->execute(array($nombret, $apellidopt, $apellidomt, $fechat, $emailt, $telefonot, $parentesco));
+            $resultInsert = $queryInsert->execute(array($nombret, $apellidopt, $apellidomt, $fechat, $emailt, $telefonot, $parentesco,$IdUsuario));
 
 
             if ($resultInsert) {
