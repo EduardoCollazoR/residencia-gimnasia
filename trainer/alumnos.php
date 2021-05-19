@@ -1,4 +1,6 @@
 <?php
+require_once 'includes/modals/modalhisto.php';
+require_once 'includes/modals/modaltutor.php';
 
 require 'includes/funciones.php';
 incluirTemplate('header');

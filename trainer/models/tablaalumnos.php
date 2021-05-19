@@ -10,8 +10,10 @@ $consulta = $query->fetchAll(PDO::FETCH_ASSOC);
 
 for($i = 0; $i < count($consulta); $i++){
 $consulta[$i]['acciones']= '
-<button class="btni btn-info" title="Informacion-Tutor" onclick="editAlumno('.$consulta[$i]['IdUsuario'].')"
-><i class="fas fa-edit"></i></button>';
+<button class="btni btn-info" title="Informacion-Tutor" onclick="infoTutor('.$consulta[$i]['IdUsuario'].')"
+><i class="fas fa-info-circle"></i></button>
+<button class="btni btn-info" title="Historial" onclick="historiall('.$consulta[$i]['IdUsuario'].')"
+><i class="fas fa-notes-medical"></i></button>';
 
 }
 

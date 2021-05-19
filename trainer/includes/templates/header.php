@@ -51,24 +51,8 @@
             <li class="active"><a href="/trainer/index.php">Inicio</a></li>
             <li ><a href="/trainer/alumnos.php">Alumnos</a></li>
             <li ><a href="/trainer/index.php">Calendario</a></li>
-            <!-- <li class="drop-down"><a href="/trainer/unidades.php">Unidades</a>
-              <ul>
-                <li><a href="/student/unidad1.php">Unidad 1</a></li>
-                <li class="drop-down"><a href="/student/unidad2.php">Unidad 2</a>
-                 <ul>
-                   <li><a href="/student/ejbases.php">Ejercicios Bases</a></li>
-                   <li><a href="/student/manoslibres.php">Manos Libre o Suelo</a></li>
-                   <li><a href="/student/barrasasimetricas.php">Barras Asimetricas</a></li>
-                   <li><a href="/student/saltocaballo.php">Salto de Caballo / Potro</a></li>
-                   <li><a href="/student/evalua2.php">Evaluacion</a></li>
-                  </ul>
-               </li>
-                <li><a href="/student/unidad3.php">Unidad 3</a></li>
-                <li><a href="/student/unidad4.php">Unidad 4</a></li>
-                <li><a href="/student/unidad5.php">Unidad 5</a></li>
-             </ul>
-           </li> -->
-          <!--  =$_SESSION[//'nombre'];?>-->
+       
+          <!-- ?=$_SESSION['nombre'];?> -->
             <li class="drop-down"><a href="perfil.php"> nombre del profesor  </a>
              <ul>
                <li><a href="perfil.php">Perfil</a></li>

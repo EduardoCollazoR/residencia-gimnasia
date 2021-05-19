@@ -33,49 +33,63 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// $("#tableAlumnos").DataTable();
-// function editAlumno(id){
-//     document.querySelector('#tituloModal').innerHTML='Editar Alumno';
-//     document.querySelector('#action').innerHTML='Actualizar';
-//     var idalumno=id;
+function infoTutor(id) {
+  var IdUsuario=id;
     
-//     var request = (window.XMLHttpRequest) ?   new XMLHttpRequest: new ActiveXObject("Microsoft.XMLHTTP");
-//     var url = './models/alumnos/edit-alumnos.php?idalumno='+idalumno;
-//     request.open("GET", url, true);
-//     request.send();
-//     request.onreadystatechange = function () {
-//       if (request.readyState == 4 && request.status == 200) {
-//         var data = JSON.parse(request.responseText);
-//         if (data.status) {
-//             document.querySelector('#idalumno').value=data.data.alumno_id;
-//             document.querySelector('#nombre').value=data.data.nombre;
-//             document.querySelector('#apellidoPaterno').value=data.data.apellido_p;
-//             document.querySelector('#apellidoMaterno').value=data.data.apellido_m;
-//             document.querySelector('#ncontrol').value=data.data.ncontrol;
-//             document.querySelector('#correo').value=data.data.correo;
-//             document.querySelector('#semestre').value=data.data.semestre;
-//             document.querySelector('#tel').value=data.data.telefono;
-//             document.querySelector('#listEstado').value=data.data.estado;
-//             $("#modalAlumno").modal("show");
-//         }else{
-//             swal('Atencion', data.msg,'error');
-//         }
-//       }
-//     }
-//   }
+    var request = (window.XMLHttpRequest) ?   new XMLHttpRequest: new ActiveXObject("Microsoft.XMLHTTP");
+    var url = './models/gettutor.php?IdUsuario='+IdUsuario;
+    request.open("GET", url, true);
+    request.send();
+    request.onreadystatechange = function () {
+      if (request.readyState == 4 && request.status == 200) {
+        var data = JSON.parse(request.responseText);
+        if (data.status) {
+            document.querySelector('#nombretutor').innerHTML=data.data.nombretutor;
+            document.querySelector('#fechanacimiento').innerHTML=data.data.FechaNacimiento;
+            document.querySelector('#email').innerHTML=data.data.Email;
+            document.querySelector('#telefono').innerHTML=data.data.Telefono;
+            document.querySelector('#parentesco').innerHTML=data.data.Parentesco;
+  
 
- 
+            $("#modalTutor").modal("show");
+        }else{
+            swal('Atencion', data.msg,'error');
+        }
+      }
+    }
+
+}
+
+function historiall(id) {
+  var IdUsuario=id;
+    
+    var request = (window.XMLHttpRequest) ?   new XMLHttpRequest: new ActiveXObject("Microsoft.XMLHTTP");
+    var url = './models/gethisto.php?IdUsuario='+IdUsuario;
+    request.open("GET", url, true);
+    request.send();
+    request.onreadystatechange = function () {
+      if (request.readyState == 4 && request.status == 200) {
+        var data = JSON.parse(request.responseText);
+        if (data.status) {
+            document.querySelector('#nombrealum').innerHTML=data.data.nombrealum;
+            document.querySelector('#estatura').innerHTML=data.data.Estatura;
+            document.querySelector('#peso').innerHTML=data.data.Peso;
+            document.querySelector('#sexo').innerHTML=data.data.Sexo;
+            document.querySelector('#cirugias').innerHTML=data.data.Cirugias;
+            document.querySelector('#estudios').innerHTML=data.data.gradoEstudio;
+            document.querySelector('#enfermedades').innerHTML=data.data.nombreEnfermedad;
+            document.querySelector('#nombreLesion').innerHTML=data.data.Nombre;
+            document.querySelector('#fechaLesion').innerHTML=data.data.FechaLesion;
+            document.querySelector('#rehabilitacion').innerHTML=data.data.Rehabilitacion;
+            document.querySelector('#tiempoRehabilitacion').innerHTML=data.data.TiempoRehabili;
+           
+  
+
+            $("#modalHistorial").modal("show");
+        }else{
+            swal('Atencion', data.msg,'error');
+        }
+      }
+    }
+
+}
