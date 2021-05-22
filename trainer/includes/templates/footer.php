@@ -75,7 +75,12 @@
 <script src="includes/js/lesion.js"></script>
 <script src="includes/js/tutor.js"></script> -->
 <script src="js/funcionalumnos.js"></script>
+<script src="js/funcionagendar.js"></script>
+<!-- <script src="js/sweetalert.min.js"></script> -->
 <!-- Data table plugin-->
 <script type="text/javascript" src="//cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
 
 <script type="text/javascript" src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script> -->

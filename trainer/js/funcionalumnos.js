@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       url: "//cdn.datatables.net/plug-ins/1.10.20/i18n/Spanish.json",
     },
     ajax: {
-      url: "models/tablaalumnos.php",
+      url: "models/tablaalumnos/tablaalumnos.php",
       dataSrc: "",
     },
     columns: [
@@ -37,7 +37,7 @@ function infoTutor(id) {
   var IdUsuario=id;
     
     var request = (window.XMLHttpRequest) ?   new XMLHttpRequest: new ActiveXObject("Microsoft.XMLHTTP");
-    var url = './models/gettutor.php?IdUsuario='+IdUsuario;
+    var url = './models/tablaalumnos/gettutor.php?IdUsuario='+IdUsuario;
     request.open("GET", url, true);
     request.send();
     request.onreadystatechange = function () {
@@ -64,7 +64,7 @@ function historiall(id) {
   var IdUsuario=id;
     
     var request = (window.XMLHttpRequest) ?   new XMLHttpRequest: new ActiveXObject("Microsoft.XMLHTTP");
-    var url = './models/gethisto.php?IdUsuario='+IdUsuario;
+    var url = './models/tablaalumnos/gethisto.php?IdUsuario='+IdUsuario;
     request.open("GET", url, true);
     request.send();
     request.onreadystatechange = function () {

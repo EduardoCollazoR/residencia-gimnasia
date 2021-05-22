@@ -74,3 +74,9 @@
 <script src="includes/js/lesion.js"></script>
 <script src="includes/js/tutor.js"></script>
 
+<script src="includes/js/funcionpeticion.js"></script>
+
+<!-- Data table plugin-->
+<script type="text/javascript" src="//cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

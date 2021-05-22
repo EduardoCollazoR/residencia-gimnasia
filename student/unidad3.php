@@ -46,7 +46,7 @@ incluirTemplate('header');
       <div class="col-lg-6">
         <div class="input-group">
           <span class="input-group-btn">
-            <button class="get-started-btn" type="button" data-toggle="modal" data-target="#livestream_scanner">Agendar Videollamada.
+            <button class="get-started-btn" type="button" ><a href="/student/peticiones.php">Solicitar Videollamada.</a>
               <i class="fa fa-barcode"></i>
             </button>
           </span>

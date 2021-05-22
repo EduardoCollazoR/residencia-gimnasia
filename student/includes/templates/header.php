@@ -1,5 +1,5 @@
 <?php
-//  require_once 'sesiones.php';
+ require_once 'sesiones.php';
 ?>
 
 <!DOCTYPE html>
@@ -62,10 +62,11 @@
                 <li><a href="/student/unidad3.php">Unidad 3</a></li>
                 <li><a href="/student/unidad4.php">Unidad 4</a></li>
                 <li><a href="/student/unidad5.php">Unidad 5</a></li>
+                <li><a href="#">Calendario</a></li>
              </ul>
            </li>
-          <!-- ?=$_SESSION['nombre'];?> -->
-            <li class="drop-down"><a href="perfil.php"> nombre  </a>
+          <!--  -->
+            <li class="drop-down"><a href="perfil.php"><?=$_SESSION['nombre'];?> </a>
              <ul>
                <li><a href="perfil.php">Perfil</a></li>
                <!-- <li><a href="">Cerrar Sesion</a></li> -->

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-05-2021 a las 04:00:10
+-- Tiempo de generación: 22-05-2021 a las 07:43:48
 -- Versión del servidor: 10.4.16-MariaDB
 -- Versión de PHP: 7.4.12
 
@@ -157,6 +157,38 @@ INSERT INTO `rol` (`IdRol`, `descripcion`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `solicitud`
+--
+
+CREATE TABLE `solicitud` (
+  `IdSolicitud` int(11) NOT NULL,
+  `Fecha` date DEFAULT NULL,
+  `Hora` varchar(20) DEFAULT NULL,
+  `Liga` varchar(300) DEFAULT NULL,
+  `Unidad` int(10) DEFAULT NULL,
+  `Estado` int(11) DEFAULT NULL,
+  `IdUsuario` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `solicitud`
+--
+
+INSERT INTO `solicitud` (`IdSolicitud`, `Fecha`, `Hora`, `Liga`, `Unidad`, `Estado`, `IdUsuario`) VALUES
+(1, '2020-05-15', '15:20:00', 'liga meet', 3, 1, 9),
+(3, NULL, NULL, NULL, 3, NULL, NULL),
+(4, NULL, NULL, NULL, 3, NULL, NULL),
+(5, NULL, NULL, NULL, 3, NULL, NULL),
+(7, NULL, NULL, NULL, 4, NULL, NULL),
+(8, NULL, NULL, NULL, 3, NULL, NULL),
+(10, '2021-05-08', '22:08', 'www.google.com', 5, 2, 8),
+(11, '2021-05-22', '05:09', 'www.google.com', 3, 1, 8),
+(13, '2021-05-21', '11:02', 'www.google.com', 3, 1, 9),
+(14, '2021-05-22', '22:38', 'https://meet.google.com/mgh-ejto-kdw', 4, 1, 9);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `tutor`
 --
 
@@ -260,6 +292,13 @@ ALTER TABLE `rol`
   ADD PRIMARY KEY (`IdRol`);
 
 --
+-- Indices de la tabla `solicitud`
+--
+ALTER TABLE `solicitud`
+  ADD PRIMARY KEY (`IdSolicitud`),
+  ADD KEY `IdUsuario` (`IdUsuario`);
+
+--
 -- Indices de la tabla `tutor`
 --
 ALTER TABLE `tutor`
@@ -303,6 +342,12 @@ ALTER TABLE `lesion`
   MODIFY `IdLesion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
+-- AUTO_INCREMENT de la tabla `solicitud`
+--
+ALTER TABLE `solicitud`
+  MODIFY `IdSolicitud` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
 -- AUTO_INCREMENT de la tabla `tutor`
 --
 ALTER TABLE `tutor`
@@ -341,6 +386,12 @@ ALTER TABLE `historialme`
 --
 ALTER TABLE `lesion`
   ADD CONSTRAINT `lesion_ibfk_1` FOREIGN KEY (`IdHistorialM`) REFERENCES `historialme` (`IdHistorialM`);
+
+--
+-- Filtros para la tabla `solicitud`
+--
+ALTER TABLE `solicitud`
+  ADD CONSTRAINT `solicitud_ibfk_1` FOREIGN KEY (`IdUsuario`) REFERENCES `usuario` (`IdUsuario`);
 
 --
 -- Filtros para la tabla `tutor`
