@@ -19,6 +19,8 @@
     <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/css/calendar.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css?v=<?php echo time(); ?>" rel="stylesheet">

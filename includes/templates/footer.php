@@ -22,7 +22,7 @@
                         <li><i class="bx bx-chevron-right"></i> <a href="index.php">Inicio</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="about.php">Acerca de Nosotros</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="cursos.php">Cursos</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terminos y Codiciones</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="terminos.php">Terminos y Codiciones</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="#">Poliza de Privacidad</a></li>
                     </ul>
                 </div>
@@ -76,6 +76,7 @@
 <script src="assets/js/login.js"></script>
 <script src="assets/js/register.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/calendar.js"></script>
 </body>
 
 

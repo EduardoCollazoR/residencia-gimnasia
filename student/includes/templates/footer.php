@@ -73,7 +73,7 @@
 <script src="includes/js/historial.js"></script>
 <script src="includes/js/lesion.js"></script>
 <script src="includes/js/tutor.js"></script>
-
+<script src="includes/js/calendar.js"></script>
 <script src="includes/js/funcionpeticion.js"></script>
 
 <!-- Data table plugin-->

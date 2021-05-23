@@ -25,6 +25,8 @@
     <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="../assets/css/FormEstilos.css" rel="stylesheet" >
     <link href="../assets/css/style2.css" rel="stylesheet">
+    <link href="../assets/css/calendar.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!-- <link rel="stylesheet" href="../assets/css/styleForm.css"> -->
 
     <!-- Template Main CSS File -->

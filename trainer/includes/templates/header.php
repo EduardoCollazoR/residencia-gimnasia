@@ -26,6 +26,8 @@
     <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="../assets/css/FormEstilos.css" rel="stylesheet" >
     <link href="../assets/css/style2.css" rel="stylesheet">
+    <link href="../assets/css/calendar.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="../assets/css/styleForm.css"> -->
 
