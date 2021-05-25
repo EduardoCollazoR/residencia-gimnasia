@@ -77,6 +77,9 @@ echo'<main id="main" data-aos="fade-in">
 </main><!-- End #main -->';
 ?>
 
+<?php
+incluirTemplate('calendar');
+?>
 
 <?php
 incluirTemplate('footer');

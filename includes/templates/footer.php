@@ -23,7 +23,6 @@
                         <li><i class="bx bx-chevron-right"></i> <a href="about.php">Acerca de Nosotros</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="cursos.php">Cursos</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="terminos.php">Terminos y Codiciones</a></li>
-                      
                     </ul>
                 </div>
 

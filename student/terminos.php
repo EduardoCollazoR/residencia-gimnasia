@@ -1,4 +1,5 @@
 <?php
+
 require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\includes\config\database.php';
 require 'includes/funciones.php';
 incluirTemplate('header');
@@ -7,7 +8,10 @@ require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\student\includes\
 
 
 
+
+
 $idUsuario=$_SESSION['id'];
+
 $sql= 'SELECT  concat(usuario.Nombre," ",usuario.ApellidoP," ",usuario.ApellidoM) as nombrealumno, usuario.*
 FROM usuario WHERE IdUsuario=?';
 $query= $pdo->prepare($sql);
@@ -35,6 +39,7 @@ echo'<main id="main" data-aos="fade-in">
 <section id="contact" class="contact">
 
 
+
 <section id="cource-details-tabs about" class="cource-details-tabs about">
 <div class="container" data-aos="fade-up">
 
@@ -54,14 +59,26 @@ la dirección webmaster@tijuana.tecnm.mx donde con gusto le atenderemos.
 </div>
  <div>
   <p>
+
+<div class="form-group" data-aos="fade-up">
+   
+  <label for="control-label" >
+
   Nos reservamos el derecho de modificar estos términos de vez en cuando a nuestra entera discreción.
    Por lo tanto, debes revisar estas páginas periódicamente. El uso continuado de la página web o nuestro 
    servicio después de dicho cambio constituye tu aceptación de los nuevos Términos. 
    Si no aceptas alguno de estos términos o cualquier versión futura de los Términos,
+
    no uses o  accedas (o continúes accediendo) a la página web o al servicio.</p>
   </div>
 <div>
  <p>
+
+   no uses o  accedas (o continúes accediendo) a la página web o al servicio.
+  <a ></a>   </label>
+
+  <label  for="control-label">
+
   El Intituto tecnologico de tijuana (ITT) con domicilio en se le dé a los mismos y de su protección.
   Calzada Del Tecnológico S/N, Fraccionamiento Tomas Aquino Tijuana, Baja California. C.P. 22414,
   es responsable de recabar sus datos personales, el uso que se le dé a los mismos y de su protección. 
@@ -69,6 +86,7 @@ la dirección webmaster@tijuana.tecnm.mx donde con gusto le atenderemos.
   en la Ley Federal de Protección de Datos Personales en Posesión de particulares, en el Capítulo I, artículo 2 y Capítulo II,
   artículos 15, 16 y 17; para los propósitos competentes a dicha Federación como lo son el empadronamiento de Gimnastas,
   Entrenadores, la organización y promoción de la Gimnasia en el país así como en el extranjero a través de competencias 
+
   y la capacitación continua de sus afiliados.</p></div> 
 <div>
 <p>
@@ -82,6 +100,19 @@ la dirección webmaster@tijuana.tecnm.mx donde con gusto le atenderemos.
  para la gestión interna al Sistema de Registro del Deporte y los programas propios de misma Federación. 
 </p></div></div>
 
+  y la capacitación continua de sus afiliados. 
+
+  Los datos recabados por el ITT podrán ser de forma directa; los que se proporcionen personalmente, o indirecta; telefónicamente 
+  y a través de nuestra página de Internet o cualquier otro medio electrónico reconocido por el ITT.
+  La información solicitada pueden ser la siguiente: nombre, domicilio, escolaridad, teléfono, correo electrónico, función,
+  modalidad, fecha de nacimiento. 
+
+  Los datos personales que se indican, serán incorporados a las bases de datos de la Pagina de Gimnasia Artistica,
+ para la gestión interna al Sistema de Registro del Deporte y los programas propios de misma Federación. 
+</div>
+
+
+
 <div class="" data-aos="fade-up">
 
   <div class="center-form">
@@ -91,6 +122,7 @@ la dirección webmaster@tijuana.tecnm.mx donde con gusto le atenderemos.
     
   <label for="control-label" >Doy el consentimiento del titular '.$nombre_alumno.' sobre los datos anteriormente citados,
   es necesario para la formalización del ingreso al Sistema de Registro del Deporte Federado.
+
   <a></a></label>
 
 </div>
@@ -103,6 +135,9 @@ la dirección webmaster@tijuana.tecnm.mx donde con gusto le atenderemos.
 
 </main><!-- End #main -->
 ';
+
+
+
 ?>
 
 
