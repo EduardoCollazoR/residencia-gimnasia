@@ -21,7 +21,7 @@
 					<ul>
 						<li><i class="bx bx-chevron-right"></i> <a href="index.php">Inicio</a></li>
 						<li><i class="bx bx-chevron-right"></i> <a href="alumnos.php">Alumnos</a></li>
-						<li><i class="bx bx-chevron-right"></i> <a href="#">Calendario</a></li>
+						<li><i class="bx bx-chevron-right"></i> <a href="calendario.php">Calendario</a></li>
 						<li><i class="bx bx-chevron-right"></i> <a href="perfil.php">Perfil</a></li>
 					
 					</ul>
@@ -76,6 +76,7 @@
 <script src="includes/js/tutor.js"></script> -->
 <script src="js/funcionalumnos.js"></script>
 <script src="js/funcionagendar.js"></script>
+<script src="js/calendar.js"></script>
 <!-- <script src="js/sweetalert.min.js"></script> -->
 <!-- Data table plugin-->
 <script type="text/javascript" src="//cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>

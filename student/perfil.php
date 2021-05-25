@@ -2,7 +2,7 @@
 require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\includes\config\database.php';
 require 'includes/funciones.php';
 incluirTemplate('header');
-// require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\student\includes\templates\sesiones.php';
+require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\student\includes\templates\sesiones.php';
 
 
 $idUsuario=$_SESSION['id'];

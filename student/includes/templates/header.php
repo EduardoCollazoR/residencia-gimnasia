@@ -25,7 +25,8 @@
     <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="../assets/css/FormEstilos.css" rel="stylesheet" >
     <link href="../assets/css/style2.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="../assets/css/styleForm.css"> -->
+    <link href="../assets/css/calendar.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <!-- Template Main CSS File -->
     <link href="../assets/css/style.css?v=<?php echo time(); ?>" rel="stylesheet">
@@ -62,7 +63,7 @@
                 <li><a href="/student/unidad3.php">Unidad 3</a></li>
                 <li><a href="/student/unidad4.php">Unidad 4</a></li>
                 <li><a href="/student/unidad5.php">Unidad 5</a></li>
-                <li><a href="#">Calendario</a></li>
+                <li><a href="/student/calendario.php">Calendario</a></li>
              </ul>
            </li>
           <!--  -->

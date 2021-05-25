@@ -38,7 +38,6 @@ incluirTemplate('header', $inicio = true, $login = true);
             <p>
               La gimnasia ha formado parte del programa deportivo de los Juegos Olímpicos de la era moderna desde que éstos empezaron en 1896.
             </p>
-            <a href="about.php" class="learn-more-btn">Aprende mas</a>
           </div>
         </div>
 
@@ -113,7 +112,7 @@ incluirTemplate('header', $inicio = true, $login = true);
                   <p class="price">--</p>
                 </div>
 
-                <h3><a href="detalles-salto.php">Salto de Caballo</a></h3>
+                <h3>Salto de Caballo</h3>
                 <p>Este evento se coloca en forma lateral para la ejecución del salto desde la tabla de impulso, vuelo de entrada, apoyo pasajero de una o dos manos, repulsión, vuelo de salida y llegada a la posición de firmes.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                                     
@@ -131,7 +130,7 @@ incluirTemplate('header', $inicio = true, $login = true);
                   <p class="price">--</p>
                 </div>
 
-                <h3><a href="detalles-barras.php">Barras Asimetricas</a></h3>
+                <h3>Barras Asimetricas</h3>
                 <p>En este evento se realizan ejercicios únicamente de vuelo y presentándose posiciones estéticas pasajeras, la gimnasta debe de realizar movimientos en ambas barras y cuya combinación sea elegante y armoniosa.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
@@ -154,7 +153,7 @@ incluirTemplate('header', $inicio = true, $login = true);
                   <p class="price">--</p>
                 </div>
 
-                <h3><a href="detalles-manos.php">Manos Libres</a></h3>
+                <h3>Manos Libres</h3>
                 <p>El ejercicio está constituido en un conjunto armonioso de movimientos que entrelazan posiciones de equilibrio, volteos y saltos, agrupados a un patrón rítmico con fondo musical.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">

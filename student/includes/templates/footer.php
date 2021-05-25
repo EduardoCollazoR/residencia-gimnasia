@@ -21,7 +21,8 @@
 					<ul>
 						<li><i class="bx bx-chevron-right"></i> <a href="index.php">Inicio</a></li>
 						<li><i class="bx bx-chevron-right"></i> <a href="unidades.php">Unidades</a></li>
-						<li><i class="bx bx-chevron-right"></i> <a href="#">Perfil</a></li>
+						<li><i class="bx bx-chevron-right"></i> <a href="perfil.php">Perfil</a></li>
+						<li><i class="bx bx-chevron-right"></i> <a href="terminos.php">Terminos y Condiciones</a></li>
 					
 					</ul>
 				</div>
@@ -73,7 +74,7 @@
 <script src="includes/js/historial.js"></script>
 <script src="includes/js/lesion.js"></script>
 <script src="includes/js/tutor.js"></script>
-
+<script src="includes/js/calendar.js"></script>
 <script src="includes/js/funcionpeticion.js"></script>
 
 <!-- Data table plugin-->
