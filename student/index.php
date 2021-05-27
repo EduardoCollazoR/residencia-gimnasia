@@ -1,15 +1,30 @@
 <?php
-
+require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\includes\config\database.php';
 require 'includes/funciones.php';
-incluirTemplate('header', $inicio = true, $login = true);
-?>
 
-<!-- ======= Login ======= -->
-	<!-- <?php //include '../login.php';?> -->
-<!-- End Login -->
+require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\student\includes\templates\sesiones.php';
 
+$idUsuario=$_SESSION['id'];
+$sql= 'SELECT historialme.IdHistorialM , lesion.IdLesion , estudio.IdEstudio, enfermedades.IdEnfermedad, tutor.IdTutor , usuario.IdUsuario FROM historialme LEFT JOIN lesion ON historialme.IdHistorialM= lesion.IdHistorialM LEFT JOIN estudio ON lesion.IdHistorialM = estudio.IdHistorialM LEFT JOIN enfermedades ON estudio.IdHistorialM = enfermedades.IdHistorialM RIGHT JOIN usuario ON historialme.IdUsuario = usuario.IdUsuario LEFT JOIN tutor ON usuario.IdUsuario = tutor.IdUsuario WHERE usuario.IdUsuario= ?';
+$query= $pdo->prepare($sql);
+$query->execute(array($idUsuario));
 
-<main id="main">
+$consulta = $query->fetchAll(PDO::FETCH_ASSOC);
+for ($i = 0; $i < count($consulta); $i++) {
+     
+     $idHistorial = $consulta[$i]['IdHistorialM'];
+     $idLesion = $consulta[$i]['IdLesion'];
+     $idEstudio = $consulta[$i]['IdEstudio'];
+     $idEnfermedad = $consulta[$i]['IdEnfermedad'];
+     $idTutor = $consulta[$i]['IdTutor'];
+  
+}
+
+if($idHistorial != null && $idLesion != null && $idEstudio != null && $idEnfermedad != null && $idTutor!= null){
+  incluirTemplate('header', $inicio = true, $login = true);
+    echo '
+    
+    <main id="main">
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -173,7 +188,33 @@ incluirTemplate('header', $inicio = true, $login = true);
     </section><!-- End Popular Courses Section -->
 
     
-  </main><!-- End #main -->
+  </main><!-- End #main -->';
+  incluirTemplate('footer');
+  }else {
+    incluirTemplate('headerh');
+  echo'<main id="main" data-aos="fade-in">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <h2>Usted debe llenar el historial medico.</h2>
+      <button class="btn btn-primary "  type="button"><a style="color:rgb(252, 252, 252);"href="/student/historial.php">HISTORIAL</a></button>
+    </div>
+  </div><!-- End Breadcrumbs -->
+
+</main><!-- End #main -->';
+  incluirTemplate('footerh');
+    
+  }
+
+?>
+
+<!-- ======= Login ======= -->
+	<!-- <?php //include '../login.php';?> -->
+<!-- End Login -->
+
+
+
   <?php
-incluirTemplate('footer');
+
 ?>

@@ -1,9 +1,35 @@
 <?php
-
+require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\includes\config\database.php';
 require 'includes/funciones.php';
-incluirTemplate('header');
-?>
-<main id="main" data-aos="fade-in">
+incluirTemplate('headerh');
+require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\student\includes\templates\sesiones.php';
+
+$idUsuario=$_SESSION['id'];
+$sql= 'SELECT enfermedades.IdEnfermedad , historialme.IdHistorialM , usuario.IdUsuario FROM enfermedades RIGHT JOIN historialme ON enfermedades.IdHistorialM= historialme.IdHistorialM RIGHT JOIN usuario ON historialme.IdUsuario = usuario.IdUsuario WHERE usuario.IdUsuario=?';
+$query= $pdo->prepare($sql);
+$query->execute(array($idUsuario));
+
+$consulta = $query->fetchAll(PDO::FETCH_ASSOC);
+for ($i = 0; $i < count($consulta); $i++) {
+  $idHistorial = $consulta[$i]['IdHistorialM'];
+  $idEnfermedad = $consulta[$i]['IdEnfermedad'];
+}
+
+if($idHistorial == null && $idEnfermedad ==null){
+
+echo'<main id="main" data-aos="fade-in">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <h2>Usted debe de llenar primero el apartado de historial medico.</h2>
+      <button class="btn btn-primary "  type="button"><a style="color:rgb(252, 252, 252);"href="/student/historial.php">Llenar historial</a></button>
+    </div>
+  </div><!-- End Breadcrumbs -->
+
+</main><!-- End #main -->';
+}elseif ($idHistorial != null && $idEnfermedad ==null) {
+  echo '<main id="main" data-aos="fade-in">
 
   <!-- ======= Breadcrumbs ======= -->
   <div class="breadcrumbs">
@@ -64,7 +90,7 @@ incluirTemplate('header');
             <div id="message"></div>
 
 
-            <!-- onclick="location.href= 'historial.php'" -->
+            
             <div class="text-center "><button id="genfermedad" class="get-started-btn btn"  type="button">Guardar</button></div><br>
             
           </form>
@@ -79,7 +105,26 @@ incluirTemplate('header');
 
 
 
-</main><!-- End #main -->
+</main><!-- End #main -->';
+
+}elseif ($idHistorial != null && $idEnfermedad !=null) {
+  echo'<main id="main" data-aos="fade-in">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <h2>Usted debe de llenar el apartado de tutor.</h2>
+      <button class="btn btn-primary "  type="button"><a style="color:rgb(252, 252, 252);"href="/student/tutor.php">Tutor</a></button>
+    </div>
+  </div><!-- End Breadcrumbs -->
+
+</main><!-- End #main -->';
+}
+
+
+incluirTemplate('footerh');
+?>
+
 <?php
-incluirTemplate('footer');
+
 ?>

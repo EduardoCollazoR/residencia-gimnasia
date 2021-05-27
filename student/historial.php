@@ -1,9 +1,41 @@
 <?php
-
+require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\includes\config\database.php';
 require 'includes/funciones.php';
-incluirTemplate('header');
-?>
-<main id="main" data-aos="fade-in">
+incluirTemplate('headerh');
+require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\student\includes\templates\sesiones.php';
+
+$idUsuario=$_SESSION['id'];
+$sql= 'SELECT  historialme.IdHistorialM, usuario.IdUsuario FROM historialme RIGHT JOIN usuario ON historialme.IdUsuario= usuario.IdUsuario WHERE usuario.IdUsuario=?';
+$query= $pdo->prepare($sql);
+$query->execute(array($idUsuario));
+
+$consulta = $query->fetchAll(PDO::FETCH_ASSOC);
+for ($i = 0; $i < count($consulta); $i++) {
+  if($consulta[$i]['IdHistorialM']==null ){
+    $idHistorial = null;
+    
+  }else{
+     $idHistorial = $consulta[$i]['IdHistorialM'];
+  
+  }
+  
+}
+
+if($idHistorial != null){
+
+echo'<main id="main" data-aos="fade-in">
+
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs">
+  <div class="container">
+    <h2>Usted debe llenar el apartado de lesion.</h2>
+    <button class="btn btn-primary "  type="button"><a style="color:rgb(252, 252, 252);"href="/student/lesion.php">Lesion</a></button>
+  </div>
+</div><!-- End Breadcrumbs -->
+
+</main><!-- End #main -->';
+}else {
+  echo '<main id="main" data-aos="fade-in">
 
   <!-- ======= Breadcrumbs ======= -->
   <div class="breadcrumbs">
@@ -100,7 +132,12 @@ incluirTemplate('header');
 
 
 
-</main><!-- End #main -->
+</main> 
+<!-- End #main -->';
+
+}incluirTemplate('footerh');
+?>
+
 <?php
-incluirTemplate('footer');
+
 ?>

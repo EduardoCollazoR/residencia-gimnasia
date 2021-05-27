@@ -1,7 +1,5 @@
 <?php
- require_once 'sesiones.php';
-
-
+require_once 'sesiones.php';
 ?>
 
 <!DOCTYPE html>
@@ -48,8 +46,8 @@
        <h1 class="logo mr-auto"><a href="index.php">Gimnasia Artistica</a></h1>
 
        <nav class="nav-menu d-none d-lg-block">
-          <ul>
-            <li class="active"><a href="/student/index.php">Inicio</a></li>
+           <ul>
+            <!-- <li class="active"><a href="/student/index.php">Inicio</a></li>
             <li class="drop-down"><a href="/student/unidades.php">Unidades</a>
               <ul>
                 <li><a href="/student/unidad1.php">Unidad 1</a></li>
@@ -67,20 +65,21 @@
                 <li><a href="/student/unidad5.php">Unidad 5</a></li>
                 <li><a href="/student/calendario.php">Calendario</a></li>
              </ul>
-           </li>
-          <!--  -->
-            <li class="drop-down"><a href="perfil.php"><?=$_SESSION['nombre'];?> </a>
-             <ul>
+           </li> -->
+            
+            <li class="drop-down"><a href="#"><?=$_SESSION['nombre'];?> </a>
+             <!-- <ul>
                <li><a href="perfil.php">Perfil</a></li>
-               <!-- <li><a href="">Cerrar Sesion</a></li> -->
-             </ul>
+               
+             </ul> -->
             </li>
-            <!-- <li><a href="unidad3.php">Unidad 3</a></li> -->
+            
 
           </ul>
-        </nav><!-- end .nav-menu -->
-          <!-- Boton logout -->
+        </nav>
+         <!-- Boton logout -->
         <a class="get-started-btn btn" href="../../../../logout.php">Cerrar Sesion</a>
+        <!-- <a class="get-started-btn btn" href="../../../../logout.php">Cerrar Sesion</a> -->
       
 
        </div>

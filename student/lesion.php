@@ -1,9 +1,44 @@
 <?php
 
+require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\includes\config\database.php';
 require 'includes/funciones.php';
-incluirTemplate('header');
-?>
-<main id="main" data-aos="fade-in">
+incluirTemplate('headerh');
+require_once 'C:\Users\alex_\OneDrive\Escritorio\ResidenciaGym\student\includes\templates\sesiones.php';
+
+$idUsuario=$_SESSION['id'];
+$sql= 'SELECT lesion.IdLesion , historialme.IdHistorialM , usuario.IdUsuario FROM lesion 
+RIGHT JOIN historialme ON lesion.IdHistorialM= historialme.IdHistorialM 
+RIGHT JOIN usuario ON historialme.IdUsuario = usuario.IdUsuario WHERE usuario.IdUsuario=?';
+$query= $pdo->prepare($sql);
+$query->execute(array($idUsuario));
+
+$consulta = $query->fetchAll(PDO::FETCH_ASSOC);
+for ($i = 0; $i < count($consulta); $i++) {
+  if($consulta[$i]['IdHistorialM']==null && $consulta[$i]['IdLesion']==null){
+    $idHistorial = null;
+    $idLesion = null; 
+  }else{
+     $idHistorial = $consulta[$i]['IdHistorialM'];
+  $idLesion = $consulta[$i]['IdLesion'];
+  }
+ 
+}
+
+if($idHistorial == null && $idLesion ==null){
+
+echo'<main id="main" data-aos="fade-in">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <h2>Usted debe de llenar primero el historial medico.</h2>
+      <button class="btn btn-primary "  type="button"><a style="color:rgb(252, 252, 252);"href="/student/historial.php">Llenar historial medico</a></button>
+    </div>
+  </div><!-- End Breadcrumbs -->
+
+</main><!-- End #main -->';
+}elseif ($idHistorial != null && $idLesion ==null) {
+  echo '<main id="main" data-aos="fade-in">
 
   <!-- ======= Breadcrumbs ======= -->
   <div class="breadcrumbs">
@@ -87,7 +122,26 @@ incluirTemplate('header');
 
 
 
-</main><!-- End #main -->
+</main><!-- End #main -->';
+
+}elseif ($idHistorial != null && $idLesion !=null) {
+  echo'<main id="main" data-aos="fade-in">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <h2>Usted debe de llenar el apartado de estudio.</h2>
+      <button class="btn btn-primary "  type="button"><a style="color:rgb(252, 252, 252);"href="/student/estudio.php">Estudio</a></button>
+    </div>
+  </div><!-- End Breadcrumbs -->
+
+</main><!-- End #main -->';
+}
+
+
+incluirTemplate('footerh');
+?>
+
 <?php
-incluirTemplate('footer');
+
 ?>
