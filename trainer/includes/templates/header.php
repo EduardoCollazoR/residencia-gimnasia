@@ -56,6 +56,7 @@
             <ul>
                <li><a href="/trainer/calendario.php">Calendario</a></li>
                <li><a href="/trainer/agenda.php">Agenda</a></li>
+               <li><a href="/trainer/evaluar.php">Evaluar</a></li>
                <!-- <li><a href="">Cerrar Sesion</a></li> -->
              </ul>
             </li>

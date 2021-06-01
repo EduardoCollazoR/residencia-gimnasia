@@ -76,6 +76,8 @@
 <script src="includes/js/tutor.js"></script>
 <script src="includes/js/calendar.js"></script>
 <script src="includes/js/funcionpeticion.js"></script>
+<script src="includes/js/funcionUnidadCali.js"></script>
+<!-- <script src="includes/js/pruebacal.js"></script> -->
 
 <!-- Data table plugin-->
 <script type="text/javascript" src="//cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>

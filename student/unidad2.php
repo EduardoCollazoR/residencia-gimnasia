@@ -26,7 +26,7 @@ incluirTemplate('header');
             </div>
             <div class="card-body">
               <h5 class="card-title"><a href="ejbases.php">Ejercicios Bases</a></h5>
-              <p class="font-italic text-center">Ejercicios Basicos</p>
+              <p class="font-italic text-center">Ejercicios Intermedios</p>
               <p class="card-text"> Consta de cuatro videos explicados acerca de ejercicios basicos e iniciales para los siguientes ejercicios de gimnasia artistica. </p>
             </div>
           </div>
@@ -39,7 +39,7 @@ incluirTemplate('header');
             </div>
             <div class="card-body">
               <h5 class="card-title"><a href="manoslibres.php">Manos Libres o Suelo</a></h5>
-              <p class="font-italic text-center">Ejercicios Basicos</p>
+              <p class="font-italic text-center">Ejercicios Intermedios</p>
               <p class="card-text"> El ejercicio está constituido en un conjunto armonioso de movimientos que entrelazan posiciones de equilibrio, volteos y saltos, agrupados a un patrón rítmico con fondo musical. </p>
             </div>
           </div>
@@ -62,7 +62,7 @@ incluirTemplate('header');
             </div>
             <div class="card-body">
               <h5 class="card-title"><a href="barrasasimetricas.php">Barras Asimetricas</a></h5>
-              <p class="font-italic text-center">Ejercicios Basicos</p>
+              <p class="font-italic text-center">Ejercicios Avanzados</p>
               <p class="card-text"> Esta conformado por videos complentados con una seccion informativa y unas series de preguntas acerca del deporte y su funcion, con el objetivo de reforzar el conocimiento teorico y visual acerca de las bases, posiciones y calentamientos adecuados de este deporte. </p>
             </div>
           </div>

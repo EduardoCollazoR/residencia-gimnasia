@@ -38,30 +38,7 @@ if (!empty($_POST)) {
            
     }
     
-    //   if ($result != 0) {
-    //     if ($idsolicitud == 0) {
-    //           $sqlInsert = "INSERT INTO solicitud (Liga,Fecha,Hora,Estado) VALUES(?,?,?,?)";
-    //           $queryInsert = $pdo->prepare($sqlInsert);
-    //           $resultInsert = $queryInsert->execute(array($meeting, $fecha, $hora, $estatus));
-    //           $accion=1;
-    //       } else {
-    //         $sqlUpdate = 'UPDATE  solicitud SET Liga=?,Fecha=?,Hora=?,Estado=? WHERE IdSolicitud=?';
-    //         $queryUpdate = $pdo->prepare($sqlUpdate);
-    //         $resultInsert = $queryUpdate->execute(array($meeting, $fecha, $hora, $estatus, $idsolicitud));
-    //         $accion = 2;
-    //     }
-    // }
-       
-        
-    
-
-    //   if ($resultInsert > 0) {
-    //     if ($accion == 1) {
-    //         $respuesta = array('status' => true, 'msg' => 'Cita creada correctamente');
-    //     } else {
-    //         $respuesta = array('status' => true, 'msg' => 'Cita actualizada correctamente');
-    //     }
-    // }
+ 
     if ($resultInsert > 0) {
       if ($accion == 1) {
           $respuesta = array('status' => true, 'msg' => 'Cita creada correctamente');

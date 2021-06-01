@@ -65,6 +65,7 @@
                 <li><a href="/student/unidad3.php">Unidad 3</a></li>
                 <li><a href="/student/unidad4.php">Unidad 4</a></li>
                 <li><a href="/student/unidad5.php">Unidad 5</a></li>
+                <li><a href="/student/unidadCali.php">Boleta</a></li>
                 <li><a href="/student/calendario.php">Calendario</a></li>
              </ul>
            </li>

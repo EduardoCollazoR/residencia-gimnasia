@@ -76,6 +76,7 @@
 <script src="includes/js/tutor.js"></script> -->
 <script src="js/funcionalumnos.js"></script>
 <script src="js/funcionagendar.js"></script>
+<script src="js/funcionevaluar.js"></script>
 <script src="js/calendar.js"></script>
 <!-- <script src="js/sweetalert.min.js"></script> -->
 <!-- Data table plugin-->
