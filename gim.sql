@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-05-2021 a las 07:43:48
+-- Tiempo de generación: 02-06-2021 a las 00:42:43
 -- Versión del servidor: 10.4.16-MariaDB
 -- Versión de PHP: 7.4.12
 
@@ -46,7 +46,11 @@ INSERT INTO `enfermedades` (`IdEnfermedad`, `Descripcion`, `IdHistorialM`) VALUE
 (15, 'Ninguna', 21),
 (16, 'Ninguna', 22),
 (17, 'Commotio Cordis', 23),
-(18, 'Hipertencion', 24);
+(18, 'Hipertencion', 24),
+(19, 'Ninguna', 26),
+(20, 'Ninguna', 29),
+(21, 'Ninguna', 30),
+(22, 'Ninguna', 32);
 
 -- --------------------------------------------------------
 
@@ -73,7 +77,31 @@ INSERT INTO `estudio` (`IdEstudio`, `Descripcion`, `IdHistorialM`) VALUES
 (19, 'Primaria', 17),
 (20, 'Preparatoria', 16),
 (21, 'Preparatoria', 23),
-(22, 'Primaria', 24);
+(22, 'Primaria', 24),
+(23, 'Secundaria', 26),
+(24, 'Primaria', 29),
+(25, 'Universidad', 30),
+(26, 'Secundaria', 32);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `evaluacion`
+--
+
+CREATE TABLE `evaluacion` (
+  `IdEvaluacion` int(11) NOT NULL,
+  `Estado` int(11) DEFAULT NULL,
+  `IdSolicitud` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `evaluacion`
+--
+
+INSERT INTO `evaluacion` (`IdEvaluacion`, `Estado`, `IdSolicitud`) VALUES
+(1, 1, 1),
+(2, 0, 11);
 
 -- --------------------------------------------------------
 
@@ -103,7 +131,14 @@ INSERT INTO `historialme` (`IdHistorialM`, `Estatura`, `Peso`, `Sexo`, `Cirugias
 (21, '150', '74', 'M', '', 3),
 (22, '123', '123', 'F', '', 2),
 (23, '180', '80', 'M', '', 9),
-(24, '180', '75', 'M', 'Hernia', 10);
+(24, '180', '75', 'M', 'Hernia', 10),
+(25, '176', '74', 'M', '', 11),
+(26, '176', '74', 'M', '', 12),
+(27, '170', '70', 'M', '', 13),
+(29, '165', '68', 'F', '', 14),
+(30, '170', '50', 'F', '', 15),
+(31, '176', '74', 'M', '', 16),
+(32, '170', '74', 'M', '', 17);
 
 -- --------------------------------------------------------
 
@@ -133,7 +168,12 @@ INSERT INTO `lesion` (`IdLesion`, `Nombre`, `FechaLesion`, `Rehabilitacion`, `Ti
 (11, 'Hombro dislocado', '2021-05-06', 'Fisioterapeuta', '5', 16),
 (12, 'hombro dislocado', '2021-04-29', 'Fisioterapeuta', '1', 17),
 (13, 'Rodilla', '2021-05-01', 'Fisioterapeuta', '1', 23),
-(14, 'Rodilla', '2021-05-06', 'Fisioterapeuta', '1dia', 24);
+(14, 'Rodilla', '2021-05-06', 'Fisioterapeuta', '1dia', 24),
+(15, '', '0000-00-00', '', '', 26),
+(16, '', '0000-00-00', '', '', 29),
+(17, 'Hombro', '2021-05-05', 'No', '0', 30),
+(18, '', '0000-00-00', '', '', 31),
+(19, '', '0000-00-00', '', '', 32);
 
 -- --------------------------------------------------------
 
@@ -181,10 +221,22 @@ INSERT INTO `solicitud` (`IdSolicitud`, `Fecha`, `Hora`, `Liga`, `Unidad`, `Esta
 (5, NULL, NULL, NULL, 3, NULL, NULL),
 (7, NULL, NULL, NULL, 4, NULL, NULL),
 (8, NULL, NULL, NULL, 3, NULL, NULL),
-(10, '2021-05-08', '22:08', 'www.google.com', 5, 2, 8),
 (11, '2021-05-22', '05:09', 'www.google.com', 3, 1, 8),
-(13, '2021-05-21', '11:02', 'www.google.com', 3, 1, 9),
-(14, '2021-05-22', '22:38', 'https://meet.google.com/mgh-ejto-kdw', 4, 1, 9);
+(13, '2021-05-21', '00:06', 'www.google.com', 3, 2, 9),
+(18, NULL, NULL, NULL, 3, 0, 15),
+(19, '2021-05-30', '17:00', 'meet.google.com/wsf-rfuy-kxy', 3, 2, 17),
+(20, NULL, NULL, NULL, 5, 0, 9);
+
+--
+-- Disparadores `solicitud`
+--
+DELIMITER $$
+CREATE TRIGGER `Evaluar` AFTER UPDATE ON `solicitud` FOR EACH ROW IF (new.Estado = 1)
+       THEN
+        INSERT INTO evaluacion (Estado,IdSolicitud) values ( 0,new.IdSolicitud);
+    END IF
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -216,7 +268,11 @@ INSERT INTO `tutor` (`IdTutor`, `Nombre`, `ApelidoP`, `ApellidoM`, `FechaNacimie
 (5, 'asd', 'asd', 'asd', '2021-04-30', 'asd@hot.com', 654654654, 'aa', 7),
 (6, 'Pedro', 'lopez', 'Garcia', '1983-01-11', 'andres@alumno.com', 2147483647, 'papa', 8),
 (7, 'Pedro', 'lopez', 'Garcia', '2021-04-30', 'andres@alumno.com', 2147483647, 'papa', 9),
-(8, 'asd', 'wer', 'hgj', '2021-04-30', 'al@hotmail.com', 2147483647, 'madre', 10);
+(8, 'asd', 'wer', 'hgj', '2021-04-30', 'al@hotmail.com', 2147483647, 'madre', 10),
+(9, 'Alejandro', 'Lopez', 'Rodriguez', '1963-12-28', 'alex@hotmail.com', 2147483647, 'Padre', 12),
+(10, 'Pedro', 'lopez', 'Rodriguez', '2019-01-23', 'andres@alumno.com', 2147483647, 'Padre', 14),
+(11, 'Alejandro', 'L', 'G', '2021-05-04', 'alejandro@hotmail.com', 2147483647, 'Padre', 15),
+(12, 'Alejandro', 'L', 'G', '2021-05-05', 'alejandro@hotmail.com', 2147483647, 'Padre', 17);
 
 -- --------------------------------------------------------
 
@@ -251,7 +307,14 @@ INSERT INTO `usuario` (`IdUsuario`, `Nombre`, `ApellidoP`, `ApellidoM`, `FechaNa
 (7, 'alex', 'ss', 'ss', '2021-04-01', 'am@maestro.com', '$2y$10$xdRIiGtFpFrwvCu6L6vctuDWak/0jpDWluAinh3rjtYJpPcZhM0mK', 'tj', 'car', 'kkkkkk', 1),
 (8, 'alexalum', 'alum', 'alum', '2021-05-01', 'alum@alumno.com', '$2y$10$ZOso2.e4aK2GcRYRJv11ie6Qj65o5JQL6xMO1Ti.nCV21WXHpXj3K', 'tj', '', 'alum', 2),
 (9, 'Andres', 'Perez', 'Cordero', '2021-04-30', 'andres@alumno.com', '$2y$10$eMD6pBReEX.BRct/N8jwiOPw.gla4ay.mwJZ4H5RWQ.Ic4Chl.cfS', 'Rito', '', 'Juand', 2),
-(10, 'Jesus', 'Gonzalez', 'Gonzalez', '2007-01-09', 'Doctor@hotmail.com', '$2y$10$zvMW39/7d6W7OtbrsyyynuB27mp.TflMYqyK4HgFw4x6SQhCXbJqW', 'TJ', 'ITT', 'asdjkhsdas', 2);
+(10, 'Jesus', 'Gonzalez', 'Gonzalez', '2007-01-09', 'Doctor@hotmail.com', '$2y$10$zvMW39/7d6W7OtbrsyyynuB27mp.TflMYqyK4HgFw4x6SQhCXbJqW', 'TJ', 'ITT', 'asdjkhsdas', 2),
+(11, 'Bryan', 'Lopez', 'Garcia', '2001-03-09', 'bryan@hotmail.com', '$2y$10$hgCJdnHBpC0uqebocOIOwuvEjG19.jXesHOdiKfvc1gM.W1xqJHJG', 'Tijuana', 'ITT', 'RosaritoB.C.', 2),
+(12, 'Angel', 'Lopez', 'Garcia', '2005-03-23', 'angel@hotmail.com', '$2y$10$ZAUrdAbqUplU6G1CXph6v..vM86.3DuxGlnQF5I14LYl25rYW/C6.', 'Tijuana', '', 'TijuanaB.C.', 2),
+(13, 'Ethan', 'Lopez', 'Garcia', '2008-09-03', 'ethan@hotmail.com', '$2y$10$rValYPAyTMylVzvmcXz1EuOwEvNgvlEYbA0P0aYiiJL7dim.HMtLG', 'Tijuana', '', 'TijuanaB.C.', 2),
+(14, 'Yadira', 'M', 'M', '1999-01-04', 'yadira@hotmail.com', '$2y$10$Miy3tJiGAP1jyFEt5NiXfeXEGtYFt8dceHclvVnvEA3dMmdZq4SfS', 'Tijuana', '', 'Tijuana.B.C.', 2),
+(15, 'Maria', 'P', 'L', '2006-02-14', 'maria@alumno.com', '$2y$10$7qg52wpNfhSTY4JzeeRaO.BZDQxfnyl4S.h2uiXioXBS/zojNLOee', 'Tijuana', 'ITT', 'TijuanaB.C.', 2),
+(16, 'Alejandro', 'Lopez', 'Garcia', '1997-01-10', 'alex@hotmail.com', '$2y$10$/5gMtdNvmFijm.yJ6A1Jq..p/ooS71oQ5HOADhLltv49vFZCNPUK2', 'Tijuana', '', 'TijuanaB.C.', 2),
+(17, 'Alex', 'Lopez', 'Garcia', '2004-01-06', 'alejandro@hotmail.com', '$2y$10$N7uJusmPneO/pXCRQHtMCuMSUJcxHV4qmur04xmMFLxc043ctBzom', 'Tijuana', '', 'TijuanaB.C.', 2);
 
 --
 -- Índices para tablas volcadas
@@ -270,6 +333,13 @@ ALTER TABLE `enfermedades`
 ALTER TABLE `estudio`
   ADD PRIMARY KEY (`IdEstudio`),
   ADD KEY `IdHistorialM` (`IdHistorialM`);
+
+--
+-- Indices de la tabla `evaluacion`
+--
+ALTER TABLE `evaluacion`
+  ADD PRIMARY KEY (`IdEvaluacion`),
+  ADD KEY `fk_idsolicitud` (`IdSolicitud`);
 
 --
 -- Indices de la tabla `historialme`
@@ -321,43 +391,49 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `enfermedades`
 --
 ALTER TABLE `enfermedades`
-  MODIFY `IdEnfermedad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `IdEnfermedad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `estudio`
 --
 ALTER TABLE `estudio`
-  MODIFY `IdEstudio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `IdEstudio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT de la tabla `evaluacion`
+--
+ALTER TABLE `evaluacion`
+  MODIFY `IdEvaluacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `historialme`
 --
 ALTER TABLE `historialme`
-  MODIFY `IdHistorialM` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `IdHistorialM` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de la tabla `lesion`
 --
 ALTER TABLE `lesion`
-  MODIFY `IdLesion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `IdLesion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `solicitud`
 --
 ALTER TABLE `solicitud`
-  MODIFY `IdSolicitud` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `IdSolicitud` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de la tabla `tutor`
 --
 ALTER TABLE `tutor`
-  MODIFY `IdTutor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `IdTutor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `IdUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `IdUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Restricciones para tablas volcadas
@@ -374,6 +450,12 @@ ALTER TABLE `enfermedades`
 --
 ALTER TABLE `estudio`
   ADD CONSTRAINT `estudio_ibfk_1` FOREIGN KEY (`IdHistorialM`) REFERENCES `historialme` (`IdHistorialM`);
+
+--
+-- Filtros para la tabla `evaluacion`
+--
+ALTER TABLE `evaluacion`
+  ADD CONSTRAINT `fk_idsolicitud` FOREIGN KEY (`IdSolicitud`) REFERENCES `solicitud` (`IdSolicitud`);
 
 --
 -- Filtros para la tabla `historialme`
