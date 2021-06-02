@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-06-2021 a las 00:42:43
+-- Tiempo de generación: 02-06-2021 a las 23:53:40
 -- Versión del servidor: 10.4.16-MariaDB
 -- Versión de PHP: 7.4.12
 
@@ -42,7 +42,6 @@ INSERT INTO `enfermedades` (`IdEnfermedad`, `Descripcion`, `IdHistorialM`) VALUE
 (11, 'Ninguna', 17),
 (12, 'Ninguna', 18),
 (13, 'Ninguna', 19),
-(14, 'Ninguna', 20),
 (15, 'Ninguna', 21),
 (16, 'Ninguna', 22),
 (17, 'Commotio Cordis', 23),
@@ -71,7 +70,6 @@ CREATE TABLE `estudio` (
 INSERT INTO `estudio` (`IdEstudio`, `Descripcion`, `IdHistorialM`) VALUES
 (14, 'Secundaria', 21),
 (15, 'Secundaria', 22),
-(16, 'Secundaria', 20),
 (17, 'Primaria', 19),
 (18, 'Primaria', 18),
 (19, 'Primaria', 17),
@@ -101,7 +99,12 @@ CREATE TABLE `evaluacion` (
 
 INSERT INTO `evaluacion` (`IdEvaluacion`, `Estado`, `IdSolicitud`) VALUES
 (1, 1, 1),
-(2, 0, 11);
+(2, 0, 11),
+(3, 2, 1),
+(4, 0, 11),
+(5, 0, 13),
+(6, 0, 19),
+(7, 0, 20);
 
 -- --------------------------------------------------------
 
@@ -127,7 +130,6 @@ INSERT INTO `historialme` (`IdHistorialM`, `Estatura`, `Peso`, `Sexo`, `Cirugias
 (17, '4', '4', 'M', '', 7),
 (18, '4', '4', 'F', '', 6),
 (19, '5', '5', 'F', '', 5),
-(20, '6', '6', 'F', '', 4),
 (21, '150', '74', 'M', '', 3),
 (22, '123', '123', 'F', '', 2),
 (23, '180', '80', 'M', '', 9),
@@ -162,9 +164,8 @@ CREATE TABLE `lesion` (
 INSERT INTO `lesion` (`IdLesion`, `Nombre`, `FechaLesion`, `Rehabilitacion`, `TiempoRehabili`, `IdHistorialM`) VALUES
 (6, '', '0000-00-00', '', '', 22),
 (7, '', '0000-00-00', '', '', 21),
-(8, '', '0000-00-00', '', '', 20),
 (9, '', '0000-00-00', '', '', 19),
-(10, '', '0000-00-00', '', '', 18),
+(10, 'Hombro dislocado', '2021-03-16', '', '', 18),
 (11, 'Hombro dislocado', '2021-05-06', 'Fisioterapeuta', '5', 16),
 (12, 'hombro dislocado', '2021-04-29', 'Fisioterapeuta', '1', 17),
 (13, 'Rodilla', '2021-05-01', 'Fisioterapeuta', '1', 23),
@@ -215,17 +216,17 @@ CREATE TABLE `solicitud` (
 --
 
 INSERT INTO `solicitud` (`IdSolicitud`, `Fecha`, `Hora`, `Liga`, `Unidad`, `Estado`, `IdUsuario`) VALUES
-(1, '2020-05-15', '15:20:00', 'liga meet', 3, 1, 9),
-(3, NULL, NULL, NULL, 3, NULL, NULL),
-(4, NULL, NULL, NULL, 3, NULL, NULL),
-(5, NULL, NULL, NULL, 3, NULL, NULL),
-(7, NULL, NULL, NULL, 4, NULL, NULL),
-(8, NULL, NULL, NULL, 3, NULL, NULL),
-(11, '2021-05-22', '05:09', 'www.google.com', 3, 1, 8),
-(13, '2021-05-21', '00:06', 'www.google.com', 3, 2, 9),
+(1, '2020-05-15', '15:20:00', 'liga meet', 3, 1, 2),
+(3, NULL, NULL, NULL, 3, 0, 3),
+(4, NULL, NULL, NULL, 3, 0, 5),
+(5, NULL, NULL, NULL, 3, 0, 6),
+(7, NULL, NULL, NULL, 4, 0, 7),
+(8, NULL, NULL, NULL, 3, 0, 8),
+(11, '2021-05-22', '05:09', 'www.google.com', 3, 1, 10),
+(13, '2021-05-21', '00:06', 'www.google.com', 3, 1, 9),
 (18, NULL, NULL, NULL, 3, 0, 15),
-(19, '2021-05-30', '17:00', 'meet.google.com/wsf-rfuy-kxy', 3, 2, 17),
-(20, NULL, NULL, NULL, 5, 0, 9);
+(19, '2021-05-30', '17:00', 'meet.google.com/wsf-rfuy-kxy', 3, 1, 17),
+(20, '2021-06-09', '17:00', 'meet.google.com/wsf-rfuy-kxy', 4, 1, 9);
 
 --
 -- Disparadores `solicitud`
@@ -261,7 +262,6 @@ CREATE TABLE `tutor` (
 --
 
 INSERT INTO `tutor` (`IdTutor`, `Nombre`, `ApelidoP`, `ApellidoM`, `FechaNacimiento`, `Email`, `Telefono`, `Parentesco`, `IdUsuario`) VALUES
-(1, 'Alejandro', '', 'asd', '2021-05-01', 'alexwolfs997@gmail.com', 2147483647, 'uuu', 4),
 (2, 'Alejandro', 'Garcia', 'asd', '2021-05-01', 'alexwolfs997@gmail.com', 2147483647, '88', 5),
 (3, 'Alejandro', 'Garcia', 'e', '2021-05-01', 'alexwolfs997@gmail.com', 2147483647, 'aa', 6),
 (4, 'asd', 'asd', 'asd', '2021-05-01', 'asdtt@tutor.com', 1234567898, '5', 2),
@@ -299,22 +299,21 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`IdUsuario`, `Nombre`, `ApellidoP`, `ApellidoM`, `FechaNacimiento`, `Email`, `Clave`, `Ciudad`, `Asociacion`, `Direccion`, `IdRol`) VALUES
-(2, 'alejandro', 'lopez', 'asd', '2021-04-01', 'ale@hotmail.com', '$2y$10$Gmg3YnmUPWsb7OzPR8woqOrmRjxSrVXqMf2wX93eNo11/t12auJwK', 'Tijuana', 'ITT', 'asdasdasd', 2),
-(3, 'an', 'as', 'as', '2021-04-01', 'as@hotmail.com', '$2y$10$2oWst2wzcqwHImLyOLIWQOz8Et1P0P1/aVa.QRJpwcNJ/MB.t6x0u', 'Tijuana', '', 'asdasd', 2),
-(4, 'Eduardo', 'as', 'as', '2021-04-08', 'ass@hotmail.com', '$2y$10$qvmookmSs7LCAUDbOcOGn.jF.MvsG7NB1IqSsoLUdfU/jNTEyj.wi', 'Tijuana', 'CAR', 'asdafdafdafafdadsfadfadfafd', 1),
-(5, 'asd', 'asd', 'ads', '2021-04-03', 'ads@hotmail.com', '$2y$10$WZDySvgmT1cbbaXMWzrvA.MR4VRVPTWKX7rkz9bb2hpHWfptg3AXS', 'tj', '', 'asdadsa', 2),
-(6, 'aa', 'aa', 'aa', '2021-04-03', 'aa@hotmail.com', '$2y$10$JydLTlYx827Il7aaXWQZh.aAYwTK5NZ9SG1SNJNBrJUa8ewpOtXja', 'asd', '', 'asdasdasdasd', 2),
-(7, 'alex', 'ss', 'ss', '2021-04-01', 'am@maestro.com', '$2y$10$xdRIiGtFpFrwvCu6L6vctuDWak/0jpDWluAinh3rjtYJpPcZhM0mK', 'tj', 'car', 'kkkkkk', 1),
-(8, 'alexalum', 'alum', 'alum', '2021-05-01', 'alum@alumno.com', '$2y$10$ZOso2.e4aK2GcRYRJv11ie6Qj65o5JQL6xMO1Ti.nCV21WXHpXj3K', 'tj', '', 'alum', 2),
-(9, 'Andres', 'Perez', 'Cordero', '2021-04-30', 'andres@alumno.com', '$2y$10$eMD6pBReEX.BRct/N8jwiOPw.gla4ay.mwJZ4H5RWQ.Ic4Chl.cfS', 'Rito', '', 'Juand', 2),
-(10, 'Jesus', 'Gonzalez', 'Gonzalez', '2007-01-09', 'Doctor@hotmail.com', '$2y$10$zvMW39/7d6W7OtbrsyyynuB27mp.TflMYqyK4HgFw4x6SQhCXbJqW', 'TJ', 'ITT', 'asdjkhsdas', 2),
-(11, 'Bryan', 'Lopez', 'Garcia', '2001-03-09', 'bryan@hotmail.com', '$2y$10$hgCJdnHBpC0uqebocOIOwuvEjG19.jXesHOdiKfvc1gM.W1xqJHJG', 'Tijuana', 'ITT', 'RosaritoB.C.', 2),
-(12, 'Angel', 'Lopez', 'Garcia', '2005-03-23', 'angel@hotmail.com', '$2y$10$ZAUrdAbqUplU6G1CXph6v..vM86.3DuxGlnQF5I14LYl25rYW/C6.', 'Tijuana', '', 'TijuanaB.C.', 2),
-(13, 'Ethan', 'Lopez', 'Garcia', '2008-09-03', 'ethan@hotmail.com', '$2y$10$rValYPAyTMylVzvmcXz1EuOwEvNgvlEYbA0P0aYiiJL7dim.HMtLG', 'Tijuana', '', 'TijuanaB.C.', 2),
-(14, 'Yadira', 'M', 'M', '1999-01-04', 'yadira@hotmail.com', '$2y$10$Miy3tJiGAP1jyFEt5NiXfeXEGtYFt8dceHclvVnvEA3dMmdZq4SfS', 'Tijuana', '', 'Tijuana.B.C.', 2),
-(15, 'Maria', 'P', 'L', '2006-02-14', 'maria@alumno.com', '$2y$10$7qg52wpNfhSTY4JzeeRaO.BZDQxfnyl4S.h2uiXioXBS/zojNLOee', 'Tijuana', 'ITT', 'TijuanaB.C.', 2),
-(16, 'Alejandro', 'Lopez', 'Garcia', '1997-01-10', 'alex@hotmail.com', '$2y$10$/5gMtdNvmFijm.yJ6A1Jq..p/ooS71oQ5HOADhLltv49vFZCNPUK2', 'Tijuana', '', 'TijuanaB.C.', 2),
-(17, 'Alex', 'Lopez', 'Garcia', '2004-01-06', 'alejandro@hotmail.com', '$2y$10$N7uJusmPneO/pXCRQHtMCuMSUJcxHV4qmur04xmMFLxc043ctBzom', 'Tijuana', '', 'TijuanaB.C.', 2);
+(2, 'Adolfo', 'Macedo', 'Cordero', '2005-04-01', 'adolfo@hotmail.com', '$2y$10$Gmg3YnmUPWsb7OzPR8woqOrmRjxSrVXqMf2wX93eNo11/t12auJwK', 'Tijuana', '', 'Tijuana B.C.', 2),
+(3, 'Gibran', 'Madera', 'Guerrero', '2008-04-01', 'gibran@hotmail.com', '$2y$10$2oWst2wzcqwHImLyOLIWQOz8Et1P0P1/aVa.QRJpwcNJ/MB.t6x0u', 'Tijuana', '', 'Tijuana B.C.', 2),
+(5, 'Carlos', 'Aramburo', 'Ramirez', '2010-04-03', 'carlos@hotmail.com', '$2y$10$WZDySvgmT1cbbaXMWzrvA.MR4VRVPTWKX7rkz9bb2hpHWfptg3AXS', 'Tijuana ', '', 'Tijuana B.C.', 2),
+(6, 'Jose', 'Gerardo', 'Ramirez', '2010-06-03', 'jose@hotmail.com', '$2y$10$JydLTlYx827Il7aaXWQZh.aAYwTK5NZ9SG1SNJNBrJUa8ewpOtXja', 'Tijuana ', '', 'Tijuana B.C.', 2),
+(7, 'Elius', 'Castro', 'Lopez', '1987-02-01', 'am@maestro.com', '$2y$10$xdRIiGtFpFrwvCu6L6vctuDWak/0jpDWluAinh3rjtYJpPcZhM0mK', 'Tijuana ', 'CAR', 'Tijuana B.C.', 1),
+(8, 'Sergio', 'Aramburo', 'Ramirez', '2009-08-01', 'sergio@hotmail.com', '$2y$10$ZOso2.e4aK2GcRYRJv11ie6Qj65o5JQL6xMO1Ti.nCV21WXHpXj3K', 'Tijuana ', '', 'Tijuana B.C.', 2),
+(9, 'Andres', 'Perez', 'Cordero', '2009-04-30', 'andres@hotmail.com', '$2y$10$eMD6pBReEX.BRct/N8jwiOPw.gla4ay.mwJZ4H5RWQ.Ic4Chl.cfS', 'Tijuana ', '', 'Tijuana B.C.', 2),
+(10, 'Jesus', 'Gonzalez', 'Gonzalez', '2011-01-09', 'jesus@hotmail.com', '$2y$10$zvMW39/7d6W7OtbrsyyynuB27mp.TflMYqyK4HgFw4x6SQhCXbJqW', 'Tijuana ', '', 'Tijuana B.C.', 2),
+(11, 'Bryan', 'Lopez', 'Garcia', '2009-03-09', 'bryan@hotmail.com', '$2y$10$hgCJdnHBpC0uqebocOIOwuvEjG19.jXesHOdiKfvc1gM.W1xqJHJG', 'Tijuana', '', 'Rosarito B.C.', 2),
+(12, 'Angel', 'Lopez', 'Garcia', '2012-03-23', 'angel@hotmail.com', '$2y$10$ZAUrdAbqUplU6G1CXph6v..vM86.3DuxGlnQF5I14LYl25rYW/C6.', 'Tijuana', '', 'Tijuana B.C.', 2),
+(13, 'Ethan', 'Lopez', 'Garcia', '2009-09-03', 'ethan@hotmail.com', '$2y$10$rValYPAyTMylVzvmcXz1EuOwEvNgvlEYbA0P0aYiiJL7dim.HMtLG', 'Tijuana', '', 'Tijuana B.C.', 2),
+(14, 'Yadira', 'Madera', 'Macedo', '2010-01-04', 'yadira@hotmail.com', '$2y$10$Miy3tJiGAP1jyFEt5NiXfeXEGtYFt8dceHclvVnvEA3dMmdZq4SfS', 'Tijuana', '', 'Tijuana B.C.', 2),
+(15, 'Maria', 'Blanco', 'Negro', '2012-02-14', 'maria@hotmail.com', '$2y$10$7qg52wpNfhSTY4JzeeRaO.BZDQxfnyl4S.h2uiXioXBS/zojNLOee', 'Tijuana', '', 'Tijuana B.C.', 2),
+(16, 'Alejandro', 'Lopez', 'Garcia', '2010-01-10', 'alex@hotmail.com', '$2y$10$/5gMtdNvmFijm.yJ6A1Jq..p/ooS71oQ5HOADhLltv49vFZCNPUK2', 'Tijuana', '', 'Tijuana B.C.', 2),
+(17, 'Ulises', 'Victorio', 'Garcia', '2009-01-06', 'ulises@hotmail.com', '$2y$10$N7uJusmPneO/pXCRQHtMCuMSUJcxHV4qmur04xmMFLxc043ctBzom', 'Tijuana', '', 'Tijuana B.C.', 2);
 
 --
 -- Índices para tablas volcadas
@@ -403,7 +402,7 @@ ALTER TABLE `estudio`
 -- AUTO_INCREMENT de la tabla `evaluacion`
 --
 ALTER TABLE `evaluacion`
-  MODIFY `IdEvaluacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `IdEvaluacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `historialme`

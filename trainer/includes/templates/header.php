@@ -51,12 +51,17 @@
        <nav class="nav-menu d-none d-lg-block">
           <ul>
             <li class="active"><a href="/trainer/index.php">Inicio</a></li>
-            <li ><a href="/trainer/alumnos.php">Alumnos</a></li>
+            <li class="drop-down" ><a href="/trainer/alumnos.php">Alumnos</a>
+            <ul>
+               <li><a href="/trainer/alumnos.php">Alumnos</a></li>
+               <li><a href="/trainer/evaluar.php">Evaluar</a></li>
+             </ul>
+            </li>
             <li class="drop-down"><a href="/trainer/index.php">Calendario</a>
             <ul>
                <li><a href="/trainer/calendario.php">Calendario</a></li>
                <li><a href="/trainer/agenda.php">Agenda</a></li>
-               <li><a href="/trainer/evaluar.php">Evaluar</a></li>
+              
                <!-- <li><a href="">Cerrar Sesion</a></li> -->
              </ul>
             </li>
