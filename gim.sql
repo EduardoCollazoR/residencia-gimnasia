@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 02-06-2021 a las 23:53:40
--- Versión del servidor: 10.4.16-MariaDB
--- Versión de PHP: 7.4.12
+-- Host: 127.0.0.1
+-- Generation Time: Jun 04, 2021 at 07:28 AM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `gim`
+-- Database: `gim`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `enfermedades`
+-- Table structure for table `enfermedades`
 --
 
 CREATE TABLE `enfermedades` (
@@ -34,7 +34,7 @@ CREATE TABLE `enfermedades` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `enfermedades`
+-- Dumping data for table `enfermedades`
 --
 
 INSERT INTO `enfermedades` (`IdEnfermedad`, `Descripcion`, `IdHistorialM`) VALUES
@@ -54,7 +54,7 @@ INSERT INTO `enfermedades` (`IdEnfermedad`, `Descripcion`, `IdHistorialM`) VALUE
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `estudio`
+-- Table structure for table `estudio`
 --
 
 CREATE TABLE `estudio` (
@@ -64,7 +64,7 @@ CREATE TABLE `estudio` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `estudio`
+-- Dumping data for table `estudio`
 --
 
 INSERT INTO `estudio` (`IdEstudio`, `Descripcion`, `IdHistorialM`) VALUES
@@ -84,7 +84,7 @@ INSERT INTO `estudio` (`IdEstudio`, `Descripcion`, `IdHistorialM`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `evaluacion`
+-- Table structure for table `evaluacion`
 --
 
 CREATE TABLE `evaluacion` (
@@ -94,7 +94,7 @@ CREATE TABLE `evaluacion` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `evaluacion`
+-- Dumping data for table `evaluacion`
 --
 
 INSERT INTO `evaluacion` (`IdEvaluacion`, `Estado`, `IdSolicitud`) VALUES
@@ -109,7 +109,41 @@ INSERT INTO `evaluacion` (`IdEvaluacion`, `Estado`, `IdSolicitud`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `historialme`
+-- Table structure for table `eventos`
+--
+
+CREATE TABLE `eventos` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `descripcion` text NOT NULL,
+  `color` varchar(255) NOT NULL,
+  `textColor` varchar(255) NOT NULL,
+  `start` datetime NOT NULL,
+  `end` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `eventos`
+--
+
+INSERT INTO `eventos` (`id`, `title`, `descripcion`, `color`, `textColor`, `start`, `end`) VALUES
+(1, 'Evento 1- 8000 suscriptores', 'celebrando los 8,000 suscriptores', '#f00877', '#FFFFFF', '2018-02-06 02:44:00', '2018-02-06 02:44:00'),
+(2, 'TituloEvento', 'DescripciÃ³n', '#FF0000', '#FFFFFF', '2018-03-21 10:30:00', '2018-03-21 10:30:00'),
+(8, 'Evento 1', 'DescripciÃ³n del evento 1', '#0000ff', '#FFFFFF', '2018-02-15 10:30:00', '2018-02-15 10:30:00'),
+(12, '-Evento 1', 'Evento 1 ', '#ff0000', '#FFFFFF', '2018-02-22 10:30:00', '2018-02-22 10:30:00'),
+(0, 'Evento..', 'asdasdasdad', '#000000', '#FFFFFF', '2021-06-09 10:30:00', '2021-06-09 10:30:00'),
+(0, 'Evento..', 'asdasdasdasdasasas', '#ec2727', '#FFFFFF', '2021-06-11 10:30:00', '2021-06-11 10:30:00'),
+(0, 'Evento..', 'asdasd', '#000000', '#FFFFFF', '2021-06-10 10:30:00', '2021-06-10 10:30:00'),
+(0, 'Evento..', 'asd', '#000000', '#FFFFFF', '2021-06-17 10:30:00', '2021-06-17 10:30:00'),
+(0, 'Evento..', 'asd', '#000000', '#FFFFFF', '2021-06-10 10:30:00', '2021-06-10 10:30:00'),
+(0, 'Evento..', 'asd', '#000000', '#FFFFFF', '2021-06-09 10:30:00', '2021-06-09 10:30:00'),
+(0, 'Evento..', 'asdasd', '#000000', '#FFFFFF', '2021-06-10 10:30:00', '2021-06-10 10:30:00'),
+(0, 'TITULO', 'HOLAAA', '#000000', '#FFFFFF', '2021-06-25 10:30:00', '2021-06-25 10:30:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `historialme`
 --
 
 CREATE TABLE `historialme` (
@@ -122,7 +156,7 @@ CREATE TABLE `historialme` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `historialme`
+-- Dumping data for table `historialme`
 --
 
 INSERT INTO `historialme` (`IdHistorialM`, `Estatura`, `Peso`, `Sexo`, `Cirugias`, `IdUsuario`) VALUES
@@ -145,7 +179,7 @@ INSERT INTO `historialme` (`IdHistorialM`, `Estatura`, `Peso`, `Sexo`, `Cirugias
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `lesion`
+-- Table structure for table `lesion`
 --
 
 CREATE TABLE `lesion` (
@@ -158,7 +192,7 @@ CREATE TABLE `lesion` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `lesion`
+-- Dumping data for table `lesion`
 --
 
 INSERT INTO `lesion` (`IdLesion`, `Nombre`, `FechaLesion`, `Rehabilitacion`, `TiempoRehabili`, `IdHistorialM`) VALUES
@@ -179,7 +213,7 @@ INSERT INTO `lesion` (`IdLesion`, `Nombre`, `FechaLesion`, `Rehabilitacion`, `Ti
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `rol`
+-- Table structure for table `rol`
 --
 
 CREATE TABLE `rol` (
@@ -188,7 +222,7 @@ CREATE TABLE `rol` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `rol`
+-- Dumping data for table `rol`
 --
 
 INSERT INTO `rol` (`IdRol`, `descripcion`) VALUES
@@ -198,7 +232,7 @@ INSERT INTO `rol` (`IdRol`, `descripcion`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `solicitud`
+-- Table structure for table `solicitud`
 --
 
 CREATE TABLE `solicitud` (
@@ -212,7 +246,7 @@ CREATE TABLE `solicitud` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `solicitud`
+-- Dumping data for table `solicitud`
 --
 
 INSERT INTO `solicitud` (`IdSolicitud`, `Fecha`, `Hora`, `Liga`, `Unidad`, `Estado`, `IdUsuario`) VALUES
@@ -229,7 +263,7 @@ INSERT INTO `solicitud` (`IdSolicitud`, `Fecha`, `Hora`, `Liga`, `Unidad`, `Esta
 (20, '2021-06-09', '17:00', 'meet.google.com/wsf-rfuy-kxy', 4, 1, 9);
 
 --
--- Disparadores `solicitud`
+-- Triggers `solicitud`
 --
 DELIMITER $$
 CREATE TRIGGER `Evaluar` AFTER UPDATE ON `solicitud` FOR EACH ROW IF (new.Estado = 1)
@@ -242,7 +276,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tutor`
+-- Table structure for table `tutor`
 --
 
 CREATE TABLE `tutor` (
@@ -258,7 +292,7 @@ CREATE TABLE `tutor` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tutor`
+-- Dumping data for table `tutor`
 --
 
 INSERT INTO `tutor` (`IdTutor`, `Nombre`, `ApelidoP`, `ApellidoM`, `FechaNacimiento`, `Email`, `Telefono`, `Parentesco`, `IdUsuario`) VALUES
@@ -277,7 +311,7 @@ INSERT INTO `tutor` (`IdTutor`, `Nombre`, `ApelidoP`, `ApellidoM`, `FechaNacimie
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuario`
+-- Table structure for table `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -295,7 +329,7 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `usuario`
+-- Dumping data for table `usuario`
 --
 
 INSERT INTO `usuario` (`IdUsuario`, `Nombre`, `ApellidoP`, `ApellidoM`, `FechaNacimiento`, `Email`, `Clave`, `Ciudad`, `Asociacion`, `Direccion`, `IdRol`) VALUES
@@ -316,66 +350,66 @@ INSERT INTO `usuario` (`IdUsuario`, `Nombre`, `ApellidoP`, `ApellidoM`, `FechaNa
 (17, 'Ulises', 'Victorio', 'Garcia', '2009-01-06', 'ulises@hotmail.com', '$2y$10$N7uJusmPneO/pXCRQHtMCuMSUJcxHV4qmur04xmMFLxc043ctBzom', 'Tijuana', '', 'Tijuana B.C.', 2);
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `enfermedades`
+-- Indexes for table `enfermedades`
 --
 ALTER TABLE `enfermedades`
   ADD PRIMARY KEY (`IdEnfermedad`),
   ADD KEY `IdHistorialM` (`IdHistorialM`);
 
 --
--- Indices de la tabla `estudio`
+-- Indexes for table `estudio`
 --
 ALTER TABLE `estudio`
   ADD PRIMARY KEY (`IdEstudio`),
   ADD KEY `IdHistorialM` (`IdHistorialM`);
 
 --
--- Indices de la tabla `evaluacion`
+-- Indexes for table `evaluacion`
 --
 ALTER TABLE `evaluacion`
   ADD PRIMARY KEY (`IdEvaluacion`),
   ADD KEY `fk_idsolicitud` (`IdSolicitud`);
 
 --
--- Indices de la tabla `historialme`
+-- Indexes for table `historialme`
 --
 ALTER TABLE `historialme`
   ADD PRIMARY KEY (`IdHistorialM`),
   ADD KEY `IdUsuario` (`IdUsuario`);
 
 --
--- Indices de la tabla `lesion`
+-- Indexes for table `lesion`
 --
 ALTER TABLE `lesion`
   ADD PRIMARY KEY (`IdLesion`),
   ADD KEY `IdHistorialM` (`IdHistorialM`);
 
 --
--- Indices de la tabla `rol`
+-- Indexes for table `rol`
 --
 ALTER TABLE `rol`
   ADD PRIMARY KEY (`IdRol`);
 
 --
--- Indices de la tabla `solicitud`
+-- Indexes for table `solicitud`
 --
 ALTER TABLE `solicitud`
   ADD PRIMARY KEY (`IdSolicitud`),
   ADD KEY `IdUsuario` (`IdUsuario`);
 
 --
--- Indices de la tabla `tutor`
+-- Indexes for table `tutor`
 --
 ALTER TABLE `tutor`
   ADD PRIMARY KEY (`IdTutor`),
   ADD KEY `IdUsuario` (`IdUsuario`);
 
 --
--- Indices de la tabla `usuario`
+-- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`IdUsuario`),
@@ -383,105 +417,105 @@ ALTER TABLE `usuario`
   ADD KEY `IdRol` (`IdRol`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `enfermedades`
+-- AUTO_INCREMENT for table `enfermedades`
 --
 ALTER TABLE `enfermedades`
   MODIFY `IdEnfermedad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT de la tabla `estudio`
+-- AUTO_INCREMENT for table `estudio`
 --
 ALTER TABLE `estudio`
   MODIFY `IdEstudio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
--- AUTO_INCREMENT de la tabla `evaluacion`
+-- AUTO_INCREMENT for table `evaluacion`
 --
 ALTER TABLE `evaluacion`
   MODIFY `IdEvaluacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT de la tabla `historialme`
+-- AUTO_INCREMENT for table `historialme`
 --
 ALTER TABLE `historialme`
   MODIFY `IdHistorialM` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
--- AUTO_INCREMENT de la tabla `lesion`
+-- AUTO_INCREMENT for table `lesion`
 --
 ALTER TABLE `lesion`
   MODIFY `IdLesion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT de la tabla `solicitud`
+-- AUTO_INCREMENT for table `solicitud`
 --
 ALTER TABLE `solicitud`
   MODIFY `IdSolicitud` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT de la tabla `tutor`
+-- AUTO_INCREMENT for table `tutor`
 --
 ALTER TABLE `tutor`
   MODIFY `IdTutor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT de la tabla `usuario`
+-- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
   MODIFY `IdUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `enfermedades`
+-- Constraints for table `enfermedades`
 --
 ALTER TABLE `enfermedades`
   ADD CONSTRAINT `enfermedades_ibfk_1` FOREIGN KEY (`IdHistorialM`) REFERENCES `historialme` (`IdHistorialM`);
 
 --
--- Filtros para la tabla `estudio`
+-- Constraints for table `estudio`
 --
 ALTER TABLE `estudio`
   ADD CONSTRAINT `estudio_ibfk_1` FOREIGN KEY (`IdHistorialM`) REFERENCES `historialme` (`IdHistorialM`);
 
 --
--- Filtros para la tabla `evaluacion`
+-- Constraints for table `evaluacion`
 --
 ALTER TABLE `evaluacion`
   ADD CONSTRAINT `fk_idsolicitud` FOREIGN KEY (`IdSolicitud`) REFERENCES `solicitud` (`IdSolicitud`);
 
 --
--- Filtros para la tabla `historialme`
+-- Constraints for table `historialme`
 --
 ALTER TABLE `historialme`
   ADD CONSTRAINT `historialme_ibfk_3` FOREIGN KEY (`IdUsuario`) REFERENCES `usuario` (`IdUsuario`);
 
 --
--- Filtros para la tabla `lesion`
+-- Constraints for table `lesion`
 --
 ALTER TABLE `lesion`
   ADD CONSTRAINT `lesion_ibfk_1` FOREIGN KEY (`IdHistorialM`) REFERENCES `historialme` (`IdHistorialM`);
 
 --
--- Filtros para la tabla `solicitud`
+-- Constraints for table `solicitud`
 --
 ALTER TABLE `solicitud`
   ADD CONSTRAINT `solicitud_ibfk_1` FOREIGN KEY (`IdUsuario`) REFERENCES `usuario` (`IdUsuario`);
 
 --
--- Filtros para la tabla `tutor`
+-- Constraints for table `tutor`
 --
 ALTER TABLE `tutor`
   ADD CONSTRAINT `tutor_ibfk_1` FOREIGN KEY (`IdUsuario`) REFERENCES `usuario` (`IdUsuario`);
 
 --
--- Filtros para la tabla `usuario`
+-- Constraints for table `usuario`
 --
 ALTER TABLE `usuario`
   ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`IdRol`) REFERENCES `rol` (`IdRol`);
